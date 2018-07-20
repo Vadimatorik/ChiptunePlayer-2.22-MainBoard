@@ -79,3 +79,6 @@
 [submodule "Program/submodule/module_fatfs_by_chan"]
 	path = Program/submodule/module_fatfs_by_chan
 	url = git@github.com:Vadimatorik/module_fatfs_by_chan.git
+[submodule "Program/submodule/module_shift_register"]
+	path = Program/submodule/module_shift_register
+	url = git@github.com:Vadimatorik/module_shift_register.git

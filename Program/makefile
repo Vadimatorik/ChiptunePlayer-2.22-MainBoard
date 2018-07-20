@@ -1,16 +1,19 @@
 ﻿PROJECT_NAME		:=	AyPlayer
 
 # MCU for lib.
-DEFINE_PROJ			+=	-DSTM32F415xx
+DEFINE_PROJ			:=	-DSTM32F415xx
 DEFINE_PROJ			+=	-DSTM32F4
 DEFINE_PROJ			+=	-DSTM32
 DEFINE_PROJ			+=	-DDEBUG
+DEFINE_PROJ			+=	-D__VFP_FP__
+DEFINE_PROJ			+=	-D__FPU_PRESENT
 
 # MCU param.
 MK_FLAGS			:=	-mcpu=cortex-m4
-MK_FLAGS			:=	-mthumb
-MK_FLAGS			:=	-mfloat-abi=hard
-MK_FLAGS			:=	--specs=nano.specs							# Use newlib-nano.
+MK_FLAGS			+=	-mthumb
+MK_FLAGS			+=	-mfloat-abi=hard
+MK_FLAGS			+=	-mfpu=fpv4-sp-d16
+MK_FLAGS			+=	--specs=nano.specs							# Use newlib-nano.
 
 # Submodule parts enable.
 DEFINE_PROJ			+=	-DMODULE_AY_YM_FILE_PLAY_ENABLED
@@ -37,7 +40,7 @@ DEFINE_PROJ			+=	-DELEMENT_SLIM_HORIZONTAL_LIST_ENABLED
 
 # Optimization.
 CODE_OPTIMIZATION	:=	-O0
-CODE_OPTIMIZATION	:=	-g3
+CODE_OPTIMIZATION	+=	-g3
 
 # C flags.
 C_FLAGS				:=	$(MK_FLAGS) 
@@ -54,8 +57,8 @@ CPP_FLAGS			+=	-fno-exceptions
 CPP_FLAGS			+=	-fshort-enums	
 
 # Linker.
-LD_FILES			=	-T submodule/module_stm32f2_low_level_by_st/ld/STM32F205xG.ld
-STARTUPE_S_NAME		=	submodule/module_stm32f2_low_level_by_st/startupe/startup_stm32f205xx.s
+LD_FILES			:=	-T submodule/module_stm32f4_low_level_by_st/LD/STM32F415RGTx_FLASH.ld
+STARTUPE_S_NAME		:=	submodule/module_stm32f4_low_level_by_st/startupe/startup_stm32f415xx.s
 
 #Linker flags.
 LDFLAGS				:=	$(MK_FLAGS) $(LD_FILES) -fno-exceptions
