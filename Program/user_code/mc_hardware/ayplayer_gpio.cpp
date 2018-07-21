@@ -2,102 +2,58 @@
 #include "port.h"
 #include "user_os.h"
 
-/*!
- * Структуры конфигурации аналоговых входов.
- */
+#define	PINS_ADC_MODE								\
+		.Mode		=	GPIO_MODE_ANALOG,			\
+		.Pull		=	GPIO_NOPULL,				\
+		.Speed		=	GPIO_SPEED_FREQ_LOW,		\
+		.Alternate	=	0
 
-/// Напряжение на аккумуляторе
-/// ( делитель 1/2 ).
-const pinCfg adcBatCfg = {
+#define	PINS_INPUT_MODE								\
+		.Mode		=	GPIO_MODE_INPUT,			\
+		.Pull		=	GPIO_PULLUP,				\
+		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,	\
+		.Alternate	=	0
+
+#define PINS_OUTPUT_PP_MODE							\
+		.Mode		=	GPIO_MODE_OUTPUT_PP,		\
+		.Pull		=	GPIO_NOPULL,				\
+		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,	\
+		.Alternate	=	0
+
+
+/// ADC.
+const pinCfg adc = {
 	.GPIOx			=	GPIOA,
 	.init = {
-		.Pin		=	GPIO_PIN_0,
-		.Mode		=	GPIO_MODE_ANALOG,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
+		.Pin		=	GPIO_PIN_0 |					/// Bat * 0.5.
+						GPIO_PIN_1 |					/// Left * 0.5.
+						GPIO_PIN_2,						/// Right * 0.5.
+		PINS_ADC_MODE
 	}
 };
 
-/// Правый аудио канал (перед усилителем).
-/// ( делитель 1/2 ).
-const pinCfg adcRightCfg = {
-	.GPIOx			=	GPIOA,
+/// Качелька громкости.
+const pinCfg buttonIncCfg = {
+	.GPIOx			=	GPIOC,
 	.init = {
-		.Pin		=	GPIO_PIN_4,
-		.Mode		=	GPIO_MODE_ANALOG,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
+		.Pin		=	GPIO_PIN_7,
+		PINS_INPUT_MODE
 	}
 };
 
-/// Левый аудио канал (перед усилителем).
-/// ( делитель 1/2 ).
-const pinCfg adcLeftPinCfg = {
+const pinCfg buttonDecCfg = {
 	.GPIOx			=	GPIOB,
 	.init = {
-		.Pin		=	GPIO_PIN_1,
-		.Mode		=	GPIO_MODE_ANALOG,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
+		.Pin		=	GPIO_PIN_9,
+		PINS_INPUT_MODE
 	}
 };
 
-/*!
- * Структуры конфигурации выводов качельки громкости.
- */
-
-/// Вход кнопки "громче", без подтяжки.
-const pinCfg buttonIncCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_1,
-		.Mode		=	GPIO_MODE_INPUT,
-		.Pull		=	GPIO_PULLUP,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
-	}
-};
-
-/// Вход кнопки "тише", без подтяжки.
-const pinCfg buttonDecCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_2,
-		.Mode		=	GPIO_MODE_INPUT,
-		.Pull		=	GPIO_PULLUP,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
-	}
-};
-
-/*!
- * Структура конфигурации вывода MIDI входа ( USART2 ).
- */
-
-const pinCfg midiUartRxCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_3,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_PULLUP,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF7_USART2
-	}
-};
-
-/*!
- * Структуры конфигурации выводов управления связи с lcd.
- * LCD == SPI1 + TIM3.
- */
-
-/// SPI1.CLK
+/// LCD.
 const pinCfg lcdClkCfg = {
 	.GPIOx			=	GPIOA,
 	.init = {
-		.Pin		=	GPIO_PIN_5,
+		.Pin		=	GPIO_PIN_5 | GPIO_PIN_7,
 		.Mode		=	GPIO_MODE_AF_PP,
 		.Pull		=	GPIO_NOPULL,
 		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
@@ -105,85 +61,42 @@ const pinCfg lcdClkCfg = {
 	}
 };
 
-/// TIM3.CHANNEL_1 PWM (подсветка).
 const pinCfg lcdPwmCfg = {
 	.GPIOx			=	GPIOA,
 	.init = {
-		.Pin		=	GPIO_PIN_6,
+		.Pin		=	GPIO_PIN_8,
 		.Mode		=	GPIO_MODE_AF_PP,
 		.Pull		=	GPIO_NOPULL,
 		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF2_TIM3
+		.Alternate	=	GPIO_AF1_TIM1
 	}
 };
 
-/// SPI1.MOSI
-const pinCfg lcdMosiCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_7,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF5_SPI1
-	}
-};
-
-/// LCD.RESET
 const pinCfg lcdResCfg = {
-	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_4,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	0
-	}
-};
-
-/// LCD.DC
-const pinCfg lcdDcCfg = {
-	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_5,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	0
-	}
-};
-
-/// LCD.CS
-const pinCfg lcdCsCfg = {
 	.GPIOx			=	GPIOB,
 	.init = {
 		.Pin		=	GPIO_PIN_2,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	0
+		PINS_OUTPUT_PP_MODE
 	}
 };
 
-/*!
- * Структуры конфигурации выводов взаимодействия
- * с картой памяти, подключенной по SDIO.
- * SD1 == SDIO + GPIO
- */
-
-/// SD1.PUSH
-const pinCfg sd1PushCfg = {
-	.GPIOx			=	GPIOC,
+const pinCfg lcdDcCfg = {
+	.GPIOx			=	GPIOB,
 	.init = {
 		.Pin		=	GPIO_PIN_0,
-		.Mode		=	GPIO_MODE_INPUT,
-		.Pull		=	GPIO_PULLUP,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
+		PINS_OUTPUT_PP_MODE
 	}
 };
 
-/// SDIO.SMD
+const pinCfg lcdCsCfg = {
+	.GPIOx			=	GPIOB,
+	.init = {
+		.Pin		=	GPIO_PIN_1,
+		PINS_OUTPUT_PP_MODE
+	}
+};
+
+/// SDIO.
 const pinCfg sd1SmdCfg = {
 	.GPIOx			=	GPIOD,
 	.init = {
@@ -195,11 +108,10 @@ const pinCfg sd1SmdCfg = {
 	}
 };
 
-/// SDIO.D0
-const pinCfg sd1D0Cfg = {
+const pinCfg sdIoAndClkCfg = {
 	.GPIOx			=	GPIOC,
 	.init = {
-		.Pin		=	GPIO_PIN_8,
+		.Pin		=	GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 | GPIO_PIN_12,
 		.Mode		=	GPIO_MODE_AF_PP,
 		.Pull		=	GPIO_NOPULL,
 		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
@@ -207,75 +119,11 @@ const pinCfg sd1D0Cfg = {
 	}
 };
 
-/// SDIO.D1
-const pinCfg sd1D1Cfg = {
-	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_9,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF12_SDIO
-	}
-};
-
-/// SDIO.D2
-const pinCfg sd1D2Cfg = {
-	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_10,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF12_SDIO
-	}
-};
-
-/// SDIO.D3
-const pinCfg sd1D3Cfg = {
-	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_11,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF12_SDIO
-	}
-};
-
-/// SDIO.CLK
-const pinCfg sd1ClkCfg = {
-	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_12,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF12_SDIO
-	}
-};
-
-/*!
- * Структуры конфигурации выводов USB_FS.
- */
-
-/// USB.VBUS
-const pinCfg otgFsVbusCfg = {
+/// USB.
+const pinCfg usbCfg = {
 	.GPIOx			=	GPIOA,
 	.init = {
-		.Pin		=	GPIO_PIN_9,
-		.Mode		=	GPIO_MODE_INPUT,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
-	}
-};
-
-/// USB.DM
-const pinCfg usbDmCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_11,
+		.Pin		=	GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 | GPIO_PIN_12,
 		.Mode		=	GPIO_MODE_AF_PP,
 		.Pull		=	GPIO_NOPULL,
 		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
@@ -283,94 +131,9 @@ const pinCfg usbDmCfg = {
 	}
 };
 
-/// USB.DP
-const pinCfg usbDpCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_12,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF10_OTG_FS
-	}
-};
-
-/*!
- * Структуры конфигурации выводов взаимодействия
- * с AY и YM чипами.
- * AY == GPIO + TIM1 + SPI3
- */
-
-/// AY1.BDIR
-/// AY2.BDIR
-const pinCfg bdirCfg = {
-	.GPIOx			=	GPIOB,
-	.init = {
-		.Pin		=	GPIO_PIN_12,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	0
-	}
-};
-
-/// AY1.RES
-const pinCfg ay1ResCfg = {
-	.GPIOx			=	GPIOA,
-	.init = {
-		.Pin		=	GPIO_PIN_15,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
-	}
-};
-
-/// AY2.RES
-const pinCfg ay2ResCfg = {
-	.GPIOx			=	GPIOB,
-	.init = {
-		.Pin		=	GPIO_PIN_15,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
-	}
-};
-
-/// AY1.BC1
-/// AY2.BC1
-const pinCfg bc1Cfg = {
+/// BOARD SPI.
+const pinCfg spiBoardTxCfg = {
 	.GPIOx			=	GPIOC,
-	.init = {
-		.Pin		=	GPIO_PIN_6,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_MEDIUM,
-		.Alternate	=	0
-	}
-};
-
-/// AY1.CLK (TIM1 CHANNEL_2N)
-/// AY2.CLK (TIM1 CHANNEL_2N)
-/// Опорная частота звуковых генераторов.
-const pinCfg ayClkCfg = {
-	.GPIOx			=	GPIOB,
-	.init = {
-		.Pin		=	GPIO_PIN_0,
-		.Mode		=	GPIO_MODE_AF_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_VERY_HIGH,
-		.Alternate	=	GPIO_AF1_TIM1
-	}
-};
-
-/// SPI3.CLK
-/// Тактовый сигнал для интерфейса SPI цифровых
-/// потенциометров и сдвиговых регистров параллельной
-/// шины звуковых генераторов.
-const pinCfg spiAudioClkCfg = {
-	.GPIOx			=	GPIOB,
 	.init = {
 		.Pin		=	GPIO_PIN_3,
 		.Mode		=	GPIO_MODE_AF_PP,
@@ -380,33 +143,17 @@ const pinCfg spiAudioClkCfg = {
 	}
 };
 
-/// SPI3.TX
-/// Сигнал данных интерфейса SPI цифровых
-/// потенциометров и сдвиговых регистров параллельной
-/// шины звуковых генераторов.
-const pinCfg spiAudioTxCfg = {
+const pinCfg spiBoardClkCfg = {
 	.GPIOx			=	GPIOB,
 	.init = {
-		.Pin		=	GPIO_PIN_5,
+		.Pin		=	GPIO_PIN_10,
 		.Mode		=	GPIO_MODE_AF_PP,
 		.Pull		=	GPIO_NOPULL,
 		.Speed		=	GPIO_SPEED_FREQ_MEDIUM,
 		.Alternate	=	GPIO_AF6_SPI3
 	}
 };
-
-/// DP.SHDN
-/// Вывод размыкания цифровых потенциометров от общей цепи.
-const pinCfg shdnCfg = {
-	.GPIOx			=	GPIOB,
-	.init = {
-		.Pin		=	GPIO_PIN_6,
-		.Mode		=	GPIO_MODE_OUTPUT_PP,
-		.Pull		=	GPIO_NOPULL,
-		.Speed		=	GPIO_SPEED_FREQ_LOW,
-		.Alternate	=	0
-	}
-};
+////////////////////////////////////////////////////////////////////////////////////////
 
 /// SR.ST
 /// Вывод-защелка сдвигового регистра
