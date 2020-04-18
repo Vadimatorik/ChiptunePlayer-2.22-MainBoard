@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 5
 Title ""
-Date "2020-04-17"
+Date "2020-04-18"
 Rev ""
 Comp ""
 Comment1 ""
@@ -14,192 +14,274 @@ Comment3 "Vadimatorik"
 Comment4 "Vadimatorik"
 $EndDescr
 $Comp
-L Device:R R1
-U 1 1 5E99BCC6
-P 950 800
-F 0 "R1" H 1020 846 50  0000 L CNN
-F 1 "10K" H 1020 755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 880 800 50  0001 C CNN
-F 3 "~" H 950 800 50  0001 C CNN
-	1    950  800 
+L Connector:Conn_01x10_Male J1
+U 1 1 5EA8D1A2
+P 600 7050
+F 0 "J1" H 700 6400 50  0000 R CNN
+F 1 "Conn_01x10_Male" H 1250 7550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal" H 600 7050 50  0001 C CNN
+F 3 "~" H 600 7050 50  0001 C CNN
+	1    600  7050
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5EA97B30
+P 1300 7500
+F 0 "#PWR02" H 1300 7250 50  0001 C CNN
+F 1 "GND" H 1305 7327 50  0000 C CNN
+F 2 "" H 1300 7500 50  0001 C CNN
+F 3 "" H 1300 7500 50  0001 C CNN
+	1    1300 7500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5EA9CF13
+P 1300 7300
+F 0 "#PWR01" H 1300 7150 50  0001 C CNN
+F 1 "+3V3" H 1315 7473 50  0000 C CNN
+F 2 "" H 1300 7300 50  0001 C CNN
+F 3 "" H 1300 7300 50  0001 C CNN
+	1    1300 7300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	800  7450 1300 7450
+Wire Wire Line
+	1300 7450 1300 7500
+Wire Wire Line
+	1300 7350 1300 7300
+Wire Wire Line
+	1300 7350 800  7350
+Wire Wire Line
+	850  6550 800  6550
+Wire Wire Line
+	850  6650 800  6650
+Wire Wire Line
+	850  6750 800  6750
+Wire Wire Line
+	850  6850 800  6850
+Wire Wire Line
+	850  6950 800  6950
+Wire Wire Line
+	800  7050 850  7050
+Wire Wire Line
+	850  7150 800  7150
+Wire Wire Line
+	850  7250 800  7250
+$Comp
+L power:+5V #PWR03
+U 1 1 5EABF65B
+P 950 5000
+F 0 "#PWR03" H 950 4850 50  0001 C CNN
+F 1 "+5V" H 965 5173 50  0000 C CNN
+F 2 "" H 950 5000 50  0001 C CNN
+F 3 "" H 950 5000 50  0001 C CNN
+	1    950  5000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
-U 1 1 5E99C526
-P 950 1200
-F 0 "R2" H 1020 1246 50  0000 L CNN
-F 1 "10K" H 1020 1155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 880 1200 50  0001 C CNN
-F 3 "~" H 950 1200 50  0001 C CNN
-	1    950  1200
+L power:GND #PWR04
+U 1 1 5EAC2A23
+P 1150 6050
+F 0 "#PWR04" H 1150 5800 50  0001 C CNN
+F 1 "GND" H 1155 5877 50  0000 C CNN
+F 2 "" H 1150 6050 50  0001 C CNN
+F 3 "" H 1150 6050 50  0001 C CNN
+	1    1150 6050
 	1    0    0    -1  
 $EndComp
-Text GLabel 900  600  0    50   Input ~ 0
+$Sheet
+S 550  1500 700  300 
+U 5EB7312D
+F0 "buttons" 50
+F1 "buttons.sch" 50
+F2 "BUTTON_UP" O R 1250 1600 50 
+F3 "BUTTON_DOWN" O R 1250 1700 50 
+$EndSheet
+$Sheet
+S 2800 600  1700 500 
+U 5E9B058E
+F0 "adc_inputs_div" 50
+F1 "adc_inputs_div.sch" 50
+F2 "VDD_BAT" I L 2800 700 50 
+F3 "USB_OTG_VBUS" I L 2800 800 50 
+F4 "LEFT_IN" I L 2800 900 50 
+F5 "RIGHT_IN" I L 2800 1000 50 
+F6 "ADC_CH_VDD_BAT" O R 4500 700 50 
+F7 "ADC_CH_USB_OTG_VBUS" O R 4500 800 50 
+F8 "ADC_CH_LEFT" O R 4500 900 50 
+F9 "ADC_CH_RIGHT" O R 4500 1000 50 
+$EndSheet
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J3
+U 1 1 5EA4935C
+P 1400 5500
+F 0 "J3" H 1450 6200 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 1450 6100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical_SMD" H 1400 5500 50  0001 C CNN
+F 3 "~" H 1400 5500 50  0001 C CNN
+	1    1400 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5EA53146
+P 1750 6050
+F 0 "#PWR07" H 1750 5800 50  0001 C CNN
+F 1 "GND" H 1755 5877 50  0000 C CNN
+F 2 "" H 1750 6050 50  0001 C CNN
+F 3 "" H 1750 6050 50  0001 C CNN
+	1    1750 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5100 1150 5100
+Wire Wire Line
+	950  5100 950  5000
+Wire Wire Line
+	1700 5100 1750 5100
+Wire Wire Line
+	1750 5100 1750 5000
+Wire Wire Line
+	1750 5000 1150 5000
+Wire Wire Line
+	1150 5000 1150 5100
+Connection ~ 1150 5100
+Wire Wire Line
+	1150 5100 950  5100
+Wire Wire Line
+	1200 6000 1150 6000
+Wire Wire Line
+	1150 6000 1150 6050
+Wire Wire Line
+	1700 6000 1750 6000
+Wire Wire Line
+	1750 6000 1750 6050
+Wire Wire Line
+	1100 5900 1200 5900
+Wire Wire Line
+	1150 6000 1150 5800
+Wire Wire Line
+	1150 5800 1200 5800
+Connection ~ 1150 6000
+Wire Wire Line
+	1750 6000 1750 5800
+Wire Wire Line
+	1750 5800 1700 5800
+Connection ~ 1750 6000
+Wire Wire Line
+	1700 5900 1800 5900
+Wire Wire Line
+	1700 5200 1800 5200
+Wire Wire Line
+	1700 5300 1800 5300
+Wire Wire Line
+	1100 5200 1200 5200
+Wire Wire Line
+	1100 5300 1200 5300
+Wire Wire Line
+	1100 5400 1200 5400
+Text Label 1800 5200 0    50   ~ 0
+SH_STROB
+Text Label 1800 5300 0    50   ~ 0
+AD5204_CS
+Text Label 1800 5900 0    50   ~ 0
+ADC_RIGHT_IN
+Text Label 1100 5900 2    50   ~ 0
+ADC_LEFT_IN
+Text Label 1100 5400 2    50   ~ 0
+LTC_CS
+Text Label 1100 5300 2    50   ~ 0
+BOARD_CLK
+Text Label 1100 5200 2    50   ~ 0
+BOARD_TX
+Text Label 850  6550 0    50   ~ 0
+JT_MS
+Text Label 850  6650 0    50   ~ 0
+JT_CLK
+Text Label 850  6750 0    50   ~ 0
+JT_DI
+Text Label 850  6850 0    50   ~ 0
+JT_DO
+Text Label 850  6950 0    50   ~ 0
+JT_RST
+Text Label 850  7050 0    50   ~ 0
+DU_TX
+Text Label 850  7150 0    50   ~ 0
+DU_RX
+Text Label 850  7250 0    50   ~ 0
+NRST
+Text Label 2750 900  2    50   ~ 0
+ADC_LEFT_IN
+Text Label 2750 1000 2    50   ~ 0
+ADC_RIGHT_IN
+Wire Wire Line
+	2750 900  2800 900 
+Wire Wire Line
+	2750 1000 2800 1000
+Text Label 2750 700  2    50   ~ 0
 VDD_BAT
 Wire Wire Line
-	950  950  950  1000
-$Comp
-L power:GND #PWR0101
-U 1 1 5E99C99A
-P 950 1400
-F 0 "#PWR0101" H 950 1150 50  0001 C CNN
-F 1 "GND" H 955 1227 50  0000 C CNN
-F 2 "" H 950 1400 50  0001 C CNN
-F 3 "" H 950 1400 50  0001 C CNN
-	1    950  1400
-	1    0    0    -1  
-$EndComp
+	2750 700  2800 700 
+Text Label 1100 5700 2    50   ~ 0
+VDD_BAT
+Text Label 1800 5700 0    50   ~ 0
+VDD_BAT
 Wire Wire Line
-	950  1350 950  1400
-$Comp
-L Device:C C1
-U 1 1 5E99D534
-P 1300 1200
-F 0 "C1" H 1415 1246 50  0000 L CNN
-F 1 "100nF" H 1415 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1338 1050 50  0001 C CNN
-F 3 "~" H 1300 1200 50  0001 C CNN
-	1    1300 1200
-	1    0    0    -1  
-$EndComp
+	1700 5700 1800 5700
 Wire Wire Line
-	950  1000 1300 1000
+	1750 5800 1750 5600
 Wire Wire Line
-	1300 1000 1300 1050
-Connection ~ 950  1000
+	1750 5600 1700 5600
+Connection ~ 1750 5800
 Wire Wire Line
-	950  1000 950  1050
-$Comp
-L power:GND #PWR0102
-U 1 1 5E99DCC3
-P 1300 1400
-F 0 "#PWR0102" H 1300 1150 50  0001 C CNN
-F 1 "GND" H 1305 1227 50  0000 C CNN
-F 2 "" H 1300 1400 50  0001 C CNN
-F 3 "" H 1300 1400 50  0001 C CNN
-	1    1300 1400
-	1    0    0    -1  
-$EndComp
+	1100 5700 1200 5700
 Wire Wire Line
-	1300 1350 1300 1400
-Text GLabel 1350 1000 2    50   Input ~ 0
-ADC_BAT
+	1150 5800 1150 5600
 Wire Wire Line
-	1350 1000 1300 1000
-Connection ~ 1300 1000
+	1150 5600 1200 5600
+Connection ~ 1150 5800
+Text Label 1300 800  0    50   ~ 0
+USB_OTG_VBUS
 Wire Wire Line
-	900  600  950  600 
+	1250 800  1300 800 
+Text Label 2750 800  2    50   ~ 0
+USB_OTG_VBUS
 Wire Wire Line
-	950  600  950  650 
-$Comp
-L Connector:USB_OTG J1
-U 1 1 5E9A1554
-P 750 2150
-F 0 "J1" H 807 2617 50  0000 C CNN
-F 1 "USB_OTG" H 807 2526 50  0000 C CNN
-F 2 "Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal" H 900 2100 50  0001 C CNN
-F 3 " ~" H 900 2100 50  0001 C CNN
-	1    750  2150
-	1    0    0    -1  
-$EndComp
+	2750 800  2800 800 
+$Sheet
+S 1150 2150 900  400 
+U 5EA97D75
+F0 "charging" 50
+F1 "charging.sch" 50
+F2 "USB_VDD" I L 1150 2250 50 
+F3 "BAT_VDD" O R 2050 2250 50 
+F4 "CHRG" O R 2050 2350 50 
+F5 "STDBY" O R 2050 2450 50 
+$EndSheet
+$Sheet
+S 550  600  700  700 
+U 5EBBB05A
+F0 "usb" 50
+F1 "usb.sch" 50
+F2 "VBUT_FAULT" O R 1250 700 50 
+F3 "OTG_VBUS" O R 1250 800 50 
+F4 "DP" B R 1250 900 50 
+F5 "DM" B R 1250 1000 50 
+F6 "ID" B R 1250 1100 50 
+F7 "OTG_EN" I R 1250 1200 50 
+$EndSheet
+Text Label 2100 2250 0    50   ~ 0
+VDD_BAT
 Wire Wire Line
-	650  2550 650  2600
+	2050 2250 2100 2250
+Text Label 1100 2250 2    50   ~ 0
+USB_OTG_VBUS
 Wire Wire Line
-	650  2600 750  2600
-Wire Wire Line
-	750  2600 750  2550
-$Comp
-L power:GND #PWR01
-U 1 1 5E9A807B
-P 650 2700
-F 0 "#PWR01" H 650 2450 50  0001 C CNN
-F 1 "GND" H 655 2527 50  0000 C CNN
-F 2 "" H 650 2700 50  0001 C CNN
-F 3 "" H 650 2700 50  0001 C CNN
-	1    650  2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	650  2650 650  2600
-Connection ~ 650  2600
-$Comp
-L Device:R R3
-U 1 1 5E9A8E93
-P 1700 2150
-F 0 "R3" V 1907 2150 50  0000 C CNN
-F 1 "22" V 1816 2150 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1630 2150 50  0001 C CNN
-F 3 "~" H 1700 2150 50  0001 C CNN
-	1    1700 2150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5E9A98F9
-P 1700 2500
-F 0 "R4" V 1907 2500 50  0000 C CNN
-F 1 "22" V 1816 2500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1630 2500 50  0001 C CNN
-F 3 "~" H 1700 2500 50  0001 C CNN
-	1    1700 2500
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1050 2250 1400 2250
-Wire Wire Line
-	1500 2250 1500 2500
-Wire Wire Line
-	1500 2500 1550 2500
-Text GLabel 1500 2750 2    50   Input ~ 0
-USB_ID
-Text GLabel 1900 2150 2    50   Input ~ 0
-USB_DP
-Text GLabel 1900 2500 2    50   Input ~ 0
-USB_DM
-Wire Wire Line
-	1850 2150 1900 2150
-Wire Wire Line
-	1850 2500 1900 2500
-$Comp
-L Power_Protection:SP0503BAHT D1
-U 1 1 5E9C685E
-P 1100 2650
-F 0 "D1" V 1442 2650 50  0000 C CNN
-F 1 "SP0503BAHT" V 1351 2650 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-143" H 1325 2600 50  0001 L CNN
-F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 1225 2775 50  0001 C CNN
-	1    1100 2650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1450 2350 1450 2750
-Wire Wire Line
-	1450 2750 1500 2750
-Wire Wire Line
-	1050 2350 1450 2350
-Wire Wire Line
-	1300 2750 1450 2750
-Connection ~ 1450 2750
-Wire Wire Line
-	1300 2550 1350 2550
-Wire Wire Line
-	1300 2650 1400 2650
-Wire Wire Line
-	1400 2650 1400 2250
-Connection ~ 1400 2250
-Wire Wire Line
-	1400 2250 1500 2250
-Wire Wire Line
-	650  2650 900  2650
-Wire Wire Line
-	650  2700 650  2650
-Connection ~ 650  2650
-Wire Wire Line
-	1350 2150 1550 2150
-Connection ~ 1350 2150
-Wire Wire Line
-	1350 2550 1350 2150
-Wire Wire Line
-	1050 2150 1350 2150
+	1100 2250 1150 2250
+NoConn ~ 1700 5400
+NoConn ~ 1700 5500
+NoConn ~ 1200 5500
 $EndSCHEMATC
