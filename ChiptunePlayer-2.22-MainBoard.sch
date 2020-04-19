@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 9
 Title ""
 Date "2020-04-18"
 Rev ""
@@ -14,67 +14,10 @@ Comment3 "Vadimatorik"
 Comment4 "Vadimatorik"
 $EndDescr
 $Comp
-L Connector:Conn_01x10_Male J1
-U 1 1 5EA8D1A2
-P 600 7050
-F 0 "J1" H 700 6400 50  0000 R CNN
-F 1 "Conn_01x10_Male" H 1250 7550 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal" H 600 7050 50  0001 C CNN
-F 3 "~" H 600 7050 50  0001 C CNN
-	1    600  7050
-	1    0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5EA97B30
-P 1300 7500
-F 0 "#PWR02" H 1300 7250 50  0001 C CNN
-F 1 "GND" H 1305 7327 50  0000 C CNN
-F 2 "" H 1300 7500 50  0001 C CNN
-F 3 "" H 1300 7500 50  0001 C CNN
-	1    1300 7500
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR01
-U 1 1 5EA9CF13
-P 1300 7300
-F 0 "#PWR01" H 1300 7150 50  0001 C CNN
-F 1 "+3V3" H 1315 7473 50  0000 C CNN
-F 2 "" H 1300 7300 50  0001 C CNN
-F 3 "" H 1300 7300 50  0001 C CNN
-	1    1300 7300
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	800  7450 1300 7450
-Wire Wire Line
-	1300 7450 1300 7500
-Wire Wire Line
-	1300 7350 1300 7300
-Wire Wire Line
-	1300 7350 800  7350
-Wire Wire Line
-	850  6550 800  6550
-Wire Wire Line
-	850  6650 800  6650
-Wire Wire Line
-	850  6750 800  6750
-Wire Wire Line
-	850  6850 800  6850
-Wire Wire Line
-	850  6950 800  6950
-Wire Wire Line
-	800  7050 850  7050
-Wire Wire Line
-	850  7150 800  7150
-Wire Wire Line
-	850  7250 800  7250
-$Comp
-L power:+5V #PWR03
+L power:+5V #PWR01
 U 1 1 5EABF65B
 P 950 5000
-F 0 "#PWR03" H 950 4850 50  0001 C CNN
+F 0 "#PWR01" H 950 4850 50  0001 C CNN
 F 1 "+5V" H 965 5173 50  0000 C CNN
 F 2 "" H 950 5000 50  0001 C CNN
 F 3 "" H 950 5000 50  0001 C CNN
@@ -82,10 +25,10 @@ F 3 "" H 950 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR04
+L power:GND #PWR02
 U 1 1 5EAC2A23
 P 1150 6050
-F 0 "#PWR04" H 1150 5800 50  0001 C CNN
+F 0 "#PWR02" H 1150 5800 50  0001 C CNN
 F 1 "GND" H 1155 5877 50  0000 C CNN
 F 2 "" H 1150 6050 50  0001 C CNN
 F 3 "" H 1150 6050 50  0001 C CNN
@@ -115,10 +58,10 @@ F8 "ADC_CH_LEFT" O R 4500 900 50
 F9 "ADC_CH_RIGHT" O R 4500 1000 50 
 $EndSheet
 $Comp
-L Connector_Generic:Conn_02x10_Odd_Even J3
+L Connector_Generic:Conn_02x10_Odd_Even J2
 U 1 1 5EA4935C
 P 1400 5500
-F 0 "J3" H 1450 6200 50  0000 C CNN
+F 0 "J2" H 1450 6200 50  0000 C CNN
 F 1 "Conn_02x10_Odd_Even" H 1450 6100 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical_SMD" H 1400 5500 50  0001 C CNN
 F 3 "~" H 1400 5500 50  0001 C CNN
@@ -126,10 +69,10 @@ F 3 "~" H 1400 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR07
+L power:GND #PWR05
 U 1 1 5EA53146
 P 1750 6050
-F 0 "#PWR07" H 1750 5800 50  0001 C CNN
+F 0 "#PWR05" H 1750 5800 50  0001 C CNN
 F 1 "GND" H 1755 5877 50  0000 C CNN
 F 2 "" H 1750 6050 50  0001 C CNN
 F 3 "" H 1750 6050 50  0001 C CNN
@@ -197,22 +140,6 @@ Text Label 1100 5300 2    50   ~ 0
 BOARD_CLK
 Text Label 1100 5200 2    50   ~ 0
 BOARD_TX
-Text Label 850  6550 0    50   ~ 0
-JT_MS
-Text Label 850  6650 0    50   ~ 0
-JT_CLK
-Text Label 850  6750 0    50   ~ 0
-JT_DI
-Text Label 850  6850 0    50   ~ 0
-JT_DO
-Text Label 850  6950 0    50   ~ 0
-JT_RST
-Text Label 850  7050 0    50   ~ 0
-DU_TX
-Text Label 850  7150 0    50   ~ 0
-DU_RX
-Text Label 850  7250 0    50   ~ 0
-NRST
 Text Label 2750 900  2    50   ~ 0
 ADC_LEFT_IN
 Text Label 2750 1000 2    50   ~ 0
@@ -252,36 +179,116 @@ USB_OTG_VBUS
 Wire Wire Line
 	2750 800  2800 800 
 $Sheet
-S 1150 2150 900  400 
+S 1200 2000 900  400 
 U 5EA97D75
 F0 "charging" 50
 F1 "charging.sch" 50
-F2 "USB_VDD" I L 1150 2250 50 
-F3 "BAT_VDD" O R 2050 2250 50 
-F4 "CHRG" O R 2050 2350 50 
-F5 "STDBY" O R 2050 2450 50 
+F2 "USB_VDD" I L 1200 2100 50 
+F3 "BAT_VDD" O R 2100 2100 50 
+F4 "CHRG" O R 2100 2200 50 
+F5 "STDBY" O R 2100 2300 50 
 $EndSheet
+Text Label 2150 2100 0    50   ~ 0
+VDD_BAT
+Wire Wire Line
+	2100 2100 2150 2100
+Text Label 1150 2100 2    50   ~ 0
+USB_OTG_VBUS
+Wire Wire Line
+	1150 2100 1200 2100
+NoConn ~ 1700 5400
+NoConn ~ 1700 5500
+NoConn ~ 1200 5500
+$Sheet
+S 8450 2300 1100 450 
+U 5E9B0FB9
+F0 "dcdc" 50
+F1 "dcdc.sch" 50
+$EndSheet
+$Sheet
+S 8450 3200 1050 750 
+U 5E9B10E6
+F0 "mc" 50
+F1 "mc.sch" 50
+F2 "USB_D_+" B L 8450 3300 50 
+F3 "USB_D_-" B L 8450 3400 50 
+F4 "USB_VBUS" I L 8450 3500 50 
+F5 "USB_ID" O L 8450 3600 50 
+F6 "OTG_EN" O L 8450 3700 50 
+F7 "VBUS_FAULT" I L 8450 3800 50 
+$EndSheet
+$Sheet
+S 8550 4200 800  300 
+U 5E9B1331
+F0 "ldo" 50
+F1 "ldo.sch" 50
+$EndSheet
+$Sheet
+S 8450 1400 550  400 
+U 5E9B1427
+F0 "keyboard" 50
+F1 "keyboard.sch" 50
+F2 "BR1" I L 8450 1500 50 
+F3 "BR2" I L 8450 1600 50 
+F4 "BR3" I L 8450 1700 50 
+F5 "SC1" O R 9000 1500 50 
+F6 "SC2" O R 9000 1600 50 
+F7 "PC3" O R 9000 1700 50 
+$EndSheet
+Wire Wire Line
+	1250 900  1300 900 
+Wire Wire Line
+	1250 1000 1300 1000
+Text Label 1300 900  0    50   ~ 0
+USB_D_+
+Text Label 1300 1000 0    50   ~ 0
+USB_D_-
 $Sheet
 S 550  600  700  700 
 U 5EBBB05A
 F0 "usb" 50
 F1 "usb.sch" 50
-F2 "VBUT_FAULT" O R 1250 700 50 
-F3 "OTG_VBUS" O R 1250 800 50 
-F4 "DP" B R 1250 900 50 
-F5 "DM" B R 1250 1000 50 
-F6 "ID" B R 1250 1100 50 
-F7 "OTG_EN" I R 1250 1200 50 
+F2 "OTG_VBUS" O R 1250 800 50 
+F3 "OTG_EN" I R 1250 1200 50 
+F4 "D_+" B R 1250 900 50 
+F5 "D_-" B R 1250 1000 50 
+F6 "VBUS_FAULT" O R 1250 700 50 
+F7 "ID" I R 1250 1100 50 
 $EndSheet
-Text Label 2100 2250 0    50   ~ 0
-VDD_BAT
-Wire Wire Line
-	2050 2250 2100 2250
-Text Label 1100 2250 2    50   ~ 0
+Text Label 8400 3500 2    50   ~ 0
 USB_OTG_VBUS
+Text Label 8400 3300 2    50   ~ 0
+USB_D_+
+Text Label 8400 3400 2    50   ~ 0
+USB_D_-
+Text Label 1300 1100 0    50   ~ 0
+USB_ID
+Text Label 8400 3600 2    50   ~ 0
+USB_ID
+Text Label 8400 3700 2    50   ~ 0
+OTG_EN
+Text Label 8400 3800 2    50   ~ 0
+VBUS_FAULT
+Text Label 1300 700  0    50   ~ 0
+VBUS_FAULT
+Text Label 1300 1200 0    50   ~ 0
+OTG_EN
 Wire Wire Line
-	1100 2250 1150 2250
-NoConn ~ 1700 5400
-NoConn ~ 1700 5500
-NoConn ~ 1200 5500
+	1250 700  1300 700 
+Wire Wire Line
+	1250 1100 1300 1100
+Wire Wire Line
+	1250 1200 1300 1200
+Wire Wire Line
+	8400 3300 8450 3300
+Wire Wire Line
+	8400 3400 8450 3400
+Wire Wire Line
+	8400 3500 8450 3500
+Wire Wire Line
+	8400 3600 8450 3600
+Wire Wire Line
+	8400 3700 8450 3700
+Wire Wire Line
+	8400 3800 8450 3800
 $EndSCHEMATC
