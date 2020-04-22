@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 9
+Sheet 1 11
 Title ""
 Date "2020-04-18"
 Rev ""
@@ -291,4 +291,23 @@ Wire Wire Line
 	8400 3700 8450 3700
 Wire Wire Line
 	8400 3800 8450 3800
+$Sheet
+S 8600 5000 550  800 
+U 5ECB9171
+F0 "microsd" 50
+F1 "microsd.sch" 50
+F2 "SD_D2" B L 8600 5300 50 
+F3 "SD_D3" B L 8600 5400 50 
+F4 "SD_D1" B L 8600 5200 50 
+F5 "SD_D0" B L 8600 5100 50 
+F6 "SD_CMD" B L 8600 5500 50 
+F7 "SD_CLK" B L 8600 5600 50 
+F8 "SD_CON" O L 8600 5700 50 
+$EndSheet
+$Sheet
+S 3150 3700 750  550 
+U 5E9E00DA
+F0 "lcd" 50
+F1 "lcd.sch" 50
+$EndSheet
 $EndSCHEMATC
