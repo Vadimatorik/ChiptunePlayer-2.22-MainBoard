@@ -13,35 +13,13 @@ Comment2 "Vadimatorik"
 Comment3 "Vadimatorik"
 Comment4 "Vadimatorik"
 $EndDescr
-$Comp
-L power:+5V #PWR01
-U 1 1 5EABF65B
-P 950 5000
-F 0 "#PWR01" H 950 4850 50  0001 C CNN
-F 1 "+5V" H 965 5173 50  0000 C CNN
-F 2 "" H 950 5000 50  0001 C CNN
-F 3 "" H 950 5000 50  0001 C CNN
-	1    950  5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5EAC2A23
-P 1150 6050
-F 0 "#PWR02" H 1150 5800 50  0001 C CNN
-F 1 "GND" H 1155 5877 50  0000 C CNN
-F 2 "" H 1150 6050 50  0001 C CNN
-F 3 "" H 1150 6050 50  0001 C CNN
-	1    1150 6050
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 550  1500 700  300 
 U 5EB7312D
 F0 "buttons" 50
 F1 "buttons.sch" 50
-F2 "BUTTON_UP" O R 1250 1600 50 
-F3 "BUTTON_DOWN" O R 1250 1700 50 
+F2 "BUTTON_PLUS" O R 1250 1600 50 
+F3 "BUTTON_MINUS" O R 1250 1700 50 
 $EndSheet
 $Sheet
 S 2800 600  1700 500 
@@ -57,89 +35,6 @@ F7 "ADC_CH_USB_OTG_VBUS" O R 4500 800 50
 F8 "ADC_CH_LEFT" O R 4500 900 50 
 F9 "ADC_CH_RIGHT" O R 4500 1000 50 
 $EndSheet
-$Comp
-L Connector_Generic:Conn_02x10_Odd_Even J2
-U 1 1 5EA4935C
-P 1400 5500
-F 0 "J2" H 1450 6200 50  0000 C CNN
-F 1 "Conn_02x10_Odd_Even" H 1450 6100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical_SMD" H 1400 5500 50  0001 C CNN
-F 3 "~" H 1400 5500 50  0001 C CNN
-	1    1400 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5EA53146
-P 1750 6050
-F 0 "#PWR05" H 1750 5800 50  0001 C CNN
-F 1 "GND" H 1755 5877 50  0000 C CNN
-F 2 "" H 1750 6050 50  0001 C CNN
-F 3 "" H 1750 6050 50  0001 C CNN
-	1    1750 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 5100 1150 5100
-Wire Wire Line
-	950  5100 950  5000
-Wire Wire Line
-	1700 5100 1750 5100
-Wire Wire Line
-	1750 5100 1750 5000
-Wire Wire Line
-	1750 5000 1150 5000
-Wire Wire Line
-	1150 5000 1150 5100
-Connection ~ 1150 5100
-Wire Wire Line
-	1150 5100 950  5100
-Wire Wire Line
-	1200 6000 1150 6000
-Wire Wire Line
-	1150 6000 1150 6050
-Wire Wire Line
-	1700 6000 1750 6000
-Wire Wire Line
-	1750 6000 1750 6050
-Wire Wire Line
-	1100 5900 1200 5900
-Wire Wire Line
-	1150 6000 1150 5800
-Wire Wire Line
-	1150 5800 1200 5800
-Connection ~ 1150 6000
-Wire Wire Line
-	1750 6000 1750 5800
-Wire Wire Line
-	1750 5800 1700 5800
-Connection ~ 1750 6000
-Wire Wire Line
-	1700 5900 1800 5900
-Wire Wire Line
-	1700 5200 1800 5200
-Wire Wire Line
-	1700 5300 1800 5300
-Wire Wire Line
-	1100 5200 1200 5200
-Wire Wire Line
-	1100 5300 1200 5300
-Wire Wire Line
-	1100 5400 1200 5400
-Text Label 1800 5200 0    50   ~ 0
-SH_STROB
-Text Label 1800 5300 0    50   ~ 0
-AD5204_CS
-Text Label 1800 5900 0    50   ~ 0
-ADC_RIGHT_IN
-Text Label 1100 5900 2    50   ~ 0
-ADC_LEFT_IN
-Text Label 1100 5400 2    50   ~ 0
-LTC_CS
-Text Label 1100 5300 2    50   ~ 0
-BOARD_CLK
-Text Label 1100 5200 2    50   ~ 0
-BOARD_TX
 Text Label 2750 900  2    50   ~ 0
 ADC_LEFT_IN
 Text Label 2750 1000 2    50   ~ 0
@@ -152,24 +47,6 @@ Text Label 2750 700  2    50   ~ 0
 VDD_BAT
 Wire Wire Line
 	2750 700  2800 700 
-Text Label 1100 5700 2    50   ~ 0
-VDD_BAT
-Text Label 1800 5700 0    50   ~ 0
-VDD_BAT
-Wire Wire Line
-	1700 5700 1800 5700
-Wire Wire Line
-	1750 5800 1750 5600
-Wire Wire Line
-	1750 5600 1700 5600
-Connection ~ 1750 5800
-Wire Wire Line
-	1100 5700 1200 5700
-Wire Wire Line
-	1150 5800 1150 5600
-Wire Wire Line
-	1150 5600 1200 5600
-Connection ~ 1150 5800
 Text Label 1300 800  0    50   ~ 0
 USB_OTG_VBUS
 Wire Wire Line
@@ -196,14 +73,13 @@ Text Label 1150 2100 2    50   ~ 0
 USB_OTG_VBUS
 Wire Wire Line
 	1150 2100 1200 2100
-NoConn ~ 1700 5400
-NoConn ~ 1700 5500
-NoConn ~ 1200 5500
 $Sheet
-S 8450 2300 1100 450 
+S 1050 3500 550  300 
 U 5E9B0FB9
 F0 "dcdc" 50
 F1 "dcdc.sch" 50
+F2 "BAT_VDD" I L 1050 3600 50 
+F3 "PWR_5V_ON" I L 1050 3700 50 
 $EndSheet
 $Sheet
 S 8450 3200 1050 750 
@@ -224,16 +100,16 @@ F0 "ldo" 50
 F1 "ldo.sch" 50
 $EndSheet
 $Sheet
-S 8450 1400 550  400 
+S 750  7250 550  400 
 U 5E9B1427
 F0 "keyboard" 50
 F1 "keyboard.sch" 50
-F2 "BR1" I L 8450 1500 50 
-F3 "BR2" I L 8450 1600 50 
-F4 "BR3" I L 8450 1700 50 
-F5 "SC1" O R 9000 1500 50 
-F6 "SC2" O R 9000 1600 50 
-F7 "PC3" O R 9000 1700 50 
+F2 "BR1" I L 750 7350 50 
+F3 "BR2" I L 750 7450 50 
+F4 "BR3" I L 750 7550 50 
+F5 "SC1" O R 1300 7350 50 
+F6 "SC2" O R 1300 7450 50 
+F7 "SC3" O R 1300 7550 50 
 $EndSheet
 Wire Wire Line
 	1250 900  1300 900 
@@ -305,9 +181,168 @@ F7 "SD_CLK" B L 8600 5600 50
 F8 "SD_CON" O L 8600 5700 50 
 $EndSheet
 $Sheet
-S 3150 3700 750  550 
+S 550  2550 550  700 
 U 5E9E00DA
 F0 "lcd" 50
 F1 "lcd.sch" 50
+F2 "LCD_RES" I R 1100 2650 50 
+F3 "LCD_A0" I R 1100 2750 50 
+F4 "SPI_TX" I R 1100 2850 50 
+F5 "SPI_CLK" I R 1100 2950 50 
+F6 "SPI_CS" I R 1100 3050 50 
+F7 "LCD_LED" I R 1100 3150 50 
 $EndSheet
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EA4C4B4
+P 6100 800
+AR Path="/5EBBB05A/5EA4C4B4" Ref="#PWR?"  Part="1" 
+AR Path="/5EA4C4B4" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 6100 650 50  0001 C CNN
+F 1 "+3V3" H 6115 973 50  0000 C CNN
+F 2 "" H 6100 800 50  0001 C CNN
+F 3 "" H 6100 800 50  0001 C CNN
+	1    6100 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EA4C4BA
+P 6100 850
+AR Path="/5EBBB05A/5EA4C4BA" Ref="#PWR?"  Part="1" 
+AR Path="/5EA4C4BA" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 6100 600 50  0001 C CNN
+F 1 "GND" H 6105 677 50  0000 C CNN
+F 2 "" H 6100 850 50  0001 C CNN
+F 3 "" H 6100 850 50  0001 C CNN
+	1    6100 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EA506EA
+P 6300 800
+AR Path="/5EB7312D/5EA506EA" Ref="#PWR?"  Part="1" 
+AR Path="/5EA506EA" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 6300 650 50  0001 C CNN
+F 1 "VDD" H 6315 973 50  0000 C CNN
+F 2 "" H 6300 800 50  0001 C CNN
+F 3 "" H 6300 800 50  0001 C CNN
+	1    6300 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5EA506F1
+P 6300 900
+AR Path="/5EB7312D/5EA506F1" Ref="#PWR?"  Part="1" 
+AR Path="/5EA506F1" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 6300 650 50  0001 C CNN
+F 1 "GNDD" H 6304 745 50  0000 C CNN
+F 2 "" H 6300 900 50  0001 C CNN
+F 3 "" H 6300 900 50  0001 C CNN
+	1    6300 900 
+	1    0    0    -1  
+$EndComp
+Text Label 1300 1600 0    50   ~ 0
+B_PLUS
+Text Label 1300 1700 0    50   ~ 0
+B_MINUS
+Wire Wire Line
+	1300 1600 1250 1600
+Wire Wire Line
+	1250 1700 1300 1700
+Wire Wire Line
+	2100 2200 2150 2200
+Wire Wire Line
+	2100 2300 2150 2300
+Text Label 2150 2200 0    50   ~ 0
+CHRG
+Text Label 2150 2300 0    50   ~ 0
+STDBY
+Wire Wire Line
+	1300 7350 1350 7350
+Wire Wire Line
+	1300 7450 1350 7450
+Wire Wire Line
+	1300 7550 1350 7550
+Wire Wire Line
+	750  7350 700  7350
+Wire Wire Line
+	750  7450 700  7450
+Wire Wire Line
+	750  7550 700  7550
+Text Label 1350 7350 0    50   ~ 0
+SC1
+Text Label 1350 7450 0    50   ~ 0
+SC2
+Text Label 1350 7550 0    50   ~ 0
+SC3
+Text Label 700  7350 2    50   ~ 0
+BR1
+Text Label 700  7450 2    50   ~ 0
+BR2
+Text Label 700  7550 2    50   ~ 0
+BR3
+Text Label 4550 700  0    50   ~ 0
+ADC_CH_VDD_BAT
+Text Label 4550 800  0    50   ~ 0
+ADC_CH_OTG_VBUS
+Text Label 4550 900  0    50   ~ 0
+ADC_CH_LEFT_IN
+Text Label 4550 1000 0    50   ~ 0
+ADC_CH_RIGHT
+Wire Wire Line
+	4550 700  4500 700 
+Wire Wire Line
+	4550 800  4500 800 
+Wire Wire Line
+	4550 900  4500 900 
+Wire Wire Line
+	4550 1000 4500 1000
+Wire Wire Line
+	1100 2650 1150 2650
+Wire Wire Line
+	1100 2750 1150 2750
+Wire Wire Line
+	1100 2850 1150 2850
+Wire Wire Line
+	1100 2950 1150 2950
+Wire Wire Line
+	1100 3050 1150 3050
+Wire Wire Line
+	1150 3150 1100 3150
+Text Label 1150 2650 0    50   ~ 0
+LCD_RES
+Text Label 1150 2750 0    50   ~ 0
+LCD_A0
+Text Label 1150 2850 0    50   ~ 0
+SPI1_TX
+Text Label 1150 2950 0    50   ~ 0
+SPI1_CLK
+Text Label 1150 3050 0    50   ~ 0
+SPI1_CS
+Text Label 1150 3150 0    50   ~ 0
+LCD_LED
+$Comp
+L power:+5V #PWR?
+U 1 1 5EA6B614
+P 6450 800
+AR Path="/5E9B0FB9/5EA6B614" Ref="#PWR?"  Part="1" 
+AR Path="/5EA6B614" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 6450 650 50  0001 C CNN
+F 1 "+5V" H 6465 973 50  0000 C CNN
+F 2 "" H 6450 800 50  0001 C CNN
+F 3 "" H 6450 800 50  0001 C CNN
+	1    6450 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 3600 1000 3600
+Wire Wire Line
+	1000 3700 1050 3700
+Text Label 1000 3600 2    50   ~ 0
+VDD_BAT
+Text Label 1000 3700 2    50   ~ 0
+PWR_5V_ON
 $EndSCHEMATC

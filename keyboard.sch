@@ -166,7 +166,7 @@ SC1
 Text HLabel 5200 4500 2    50   Output ~ 0
 SC2
 Text HLabel 5800 4500 2    50   Output ~ 0
-PC3
+SC3
 Wire Wire Line
 	4550 3500 4550 4500
 Wire Wire Line

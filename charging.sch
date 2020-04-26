@@ -45,20 +45,20 @@ Connection ~ 5350 3000
 $Comp
 L Device:C C5
 U 1 1 5EA9A9B6
-P 5000 3300
-F 0 "C5" H 5115 3346 50  0000 L CNN
-F 1 "10uF" H 5115 3255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5038 3150 50  0001 C CNN
-F 3 "~" H 5000 3300 50  0001 C CNN
-	1    5000 3300
+P 5000 3200
+F 0 "C5" H 5115 3246 50  0000 L CNN
+F 1 "10uF" H 5115 3155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5038 3050 50  0001 C CNN
+F 3 "~" H 5000 3200 50  0001 C CNN
+	1    5000 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 3150 5000 3000
+	5000 3050 5000 3000
 Wire Wire Line
 	5000 3000 4950 3000
 Wire Wire Line
-	5000 3450 5000 3500
+	5000 3350 5000 3500
 Wire Wire Line
 	5000 3500 5350 3500
 Wire Wire Line
@@ -152,12 +152,12 @@ $EndComp
 $Comp
 L Device:LED D2
 U 1 1 5EAB1A26
-P 5550 4750
-F 0 "D2" H 5543 4967 50  0000 C CNN
-F 1 "STDBY" H 5543 4876 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5550 4750 50  0001 C CNN
-F 3 "~" H 5550 4750 50  0001 C CNN
-	1    5550 4750
+P 5550 4850
+F 0 "D2" H 5543 5067 50  0000 C CNN
+F 1 "STDBY" H 5543 4976 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5550 4850 50  0001 C CNN
+F 3 "~" H 5550 4850 50  0001 C CNN
+	1    5550 4850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -174,26 +174,22 @@ $EndComp
 $Comp
 L Device:R R4
 U 1 1 5EAB3B1E
-P 5200 4750
-F 0 "R4" V 5000 4700 50  0000 L CNN
-F 1 "330" V 5100 4675 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5130 4750 50  0001 C CNN
-F 3 "~" H 5200 4750 50  0001 C CNN
-	1    5200 4750
+P 5200 4850
+F 0 "R4" V 5000 4800 50  0000 L CNN
+F 1 "330" V 5100 4775 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5130 4850 50  0001 C CNN
+F 3 "~" H 5200 4850 50  0001 C CNN
+	1    5200 4850
 	0    1    1    0   
 $EndComp
-Text Label 5000 4350 2    50   ~ 0
+Text Label 4950 4350 2    50   ~ 0
 CHRG
-Text Label 5000 4750 2    50   ~ 0
+Text Label 4900 4850 2    50   ~ 0
 STDBY
-Wire Wire Line
-	5000 4350 5050 4350
-Wire Wire Line
-	5000 4750 5050 4750
 Wire Wire Line
 	5350 4350 5400 4350
 Wire Wire Line
-	5350 4750 5400 4750
+	5350 4850 5400 4850
 Text Label 5050 2950 0    50   ~ 0
 USB_VDD
 Wire Wire Line
@@ -203,26 +199,11 @@ Wire Wire Line
 Text Label 5800 4350 0    50   ~ 0
 USB_VDD
 Wire Wire Line
-	5700 4750 5750 4750
-Wire Wire Line
-	5750 4750 5750 4350
-Wire Wire Line
-	5750 4350 5800 4350
-Wire Wire Line
-	5750 4350 5700 4350
-Connection ~ 5750 4350
-Text HLabel 6550 4350 2    50   Output ~ 0
+	5700 4850 5750 4850
+Text HLabel 5050 4500 2    50   Output ~ 0
 CHRG
-Text Label 6500 4350 2    50   ~ 0
-CHRG
-Wire Wire Line
-	6500 4350 6550 4350
-Text HLabel 6550 4450 2    50   Output ~ 0
+Text HLabel 5050 5000 2    50   Output ~ 0
 STDBY
-Text Label 6500 4450 2    50   ~ 0
-STDBY
-Wire Wire Line
-	6500 4450 6550 4450
 $Comp
 L tp4056:TP4056 U1
 U 1 1 5EAE2027
@@ -234,4 +215,29 @@ F 3 "" H 5900 3250 60  0001 C CNN
 	1    5900 3250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5700 4350 5750 4350
+Wire Wire Line
+	4950 4350 5000 4350
+Wire Wire Line
+	5000 4350 5000 4500
+Wire Wire Line
+	5000 4500 5050 4500
+Connection ~ 5000 4350
+Wire Wire Line
+	5000 4350 5050 4350
+Wire Wire Line
+	4900 4850 5000 4850
+Wire Wire Line
+	5000 4850 5000 5000
+Wire Wire Line
+	5000 5000 5050 5000
+Connection ~ 5000 4850
+Wire Wire Line
+	5000 4850 5050 4850
+Wire Wire Line
+	5750 4350 5750 4850
+Connection ~ 5750 4350
+Wire Wire Line
+	5750 4350 5800 4350
 $EndSCHEMATC
