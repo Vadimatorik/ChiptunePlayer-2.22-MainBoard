@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 11
+Sheet 5 12
 Title ""
 Date ""
 Rev ""
@@ -180,17 +180,6 @@ $EndComp
 Wire Wire Line
 	5300 3200 5250 3200
 Connection ~ 5250 3200
-$Comp
-L Diode:1N5819 D6
-U 1 1 5EAB9973
-P 6300 3200
-F 0 "D6" H 6300 2983 50  0000 C CNN
-F 1 "1N5819" H 6300 3074 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6300 3025 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 6300 3200 50  0001 C CNN
-	1    6300 3200
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	6450 3200 6500 3200
 $Comp
@@ -358,4 +347,15 @@ Wire Wire Line
 	6100 3200 6150 3200
 Wire Wire Line
 	6500 3200 6500 3750
+$Comp
+L Diode:1N4001 D6
+U 1 1 5EA703D8
+P 6300 3200
+F 0 "D6" H 6300 2983 50  0000 C CNN
+F 1 "1N4001" H 6300 3074 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 6300 3025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6300 3200 50  0001 C CNN
+	1    6300 3200
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

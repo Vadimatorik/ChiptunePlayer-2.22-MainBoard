@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 11
+Sheet 1 12
 Title ""
 Date "2020-04-18"
 Rev ""
@@ -345,4 +345,10 @@ Text Label 1000 3600 2    50   ~ 0
 VDD_BAT
 Text Label 1000 3700 2    50   ~ 0
 PWR_5V_ON
+$Sheet
+S 4550 5650 1400 900 
+U 5EABB8BC
+F0 "generators" 50
+F1 "generators.sch" 50
+$EndSheet
 $EndSCHEMATC

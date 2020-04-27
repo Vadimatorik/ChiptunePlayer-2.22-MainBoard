@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 6 11
+Sheet 6 12
 Title ""
 Date ""
 Rev ""
@@ -707,7 +707,7 @@ AR Path="/5EAFA104" Ref="J?"  Part="1"
 AR Path="/5E9B10E6/5EAFA104" Ref="J1"  Part="1" 
 F 0 "J1" H 650 5050 50  0000 R CNN
 F 1 "Conn_01x10_Male" H 1200 6200 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal" H 550 5700 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x10_P1.27mm_Vertical" H 550 5700 50  0001 C CNN
 F 3 "~" H 550 5700 50  0001 C CNN
 	1    550  5700
 	1    0    0    1   

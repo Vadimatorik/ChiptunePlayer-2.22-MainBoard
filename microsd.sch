@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 11
+Sheet 10 12
 Title ""
 Date ""
 Rev ""
@@ -19,7 +19,7 @@ U 1 1 5ECB94E0
 P 6650 4050
 F 0 "J4" H 6600 4867 50  0000 C CNN
 F 1 "49225-0821" H 6600 4776 50  0000 C CNN
-F 2 "" H 8700 4750 50  0001 C CNN
+F 2 "microsd:49225-0821" H 8700 4750 50  0001 C CNN
 F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 6650 4150 50  0001 C CNN
 	1    6650 4050
 	1    0    0    -1  
@@ -76,8 +76,6 @@ F 3 "~" H 5450 3100 50  0001 C CNN
 	1    5450 3100
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4850 3650 5650 3650
 Text HLabel 4850 3650 0    50   BiDi ~ 0
 SD_D2
 Text HLabel 4850 3750 0    50   BiDi ~ 0
@@ -87,55 +85,15 @@ SD_D1
 Text HLabel 4850 4250 0    50   BiDi ~ 0
 SD_D0
 Wire Wire Line
-	4850 3750 5550 3750
-Wire Wire Line
-	5750 3850 5200 3850
-Wire Wire Line
 	5750 3950 4850 3950
 Wire Wire Line
 	5750 4050 4850 4050
 Wire Wire Line
 	5750 4150 4850 4150
-Wire Wire Line
-	5750 4250 5450 4250
-Wire Wire Line
-	5750 4350 5350 4350
-Wire Wire Line
-	5750 4450 5100 4450
 Text HLabel 4850 3850 0    50   BiDi ~ 0
 SD_CMD
 Text HLabel 4850 4050 0    50   BiDi ~ 0
 SD_CLK
-Wire Wire Line
-	5650 3300 5650 3650
-Connection ~ 5650 3650
-Wire Wire Line
-	5650 3650 5750 3650
-Wire Wire Line
-	5550 3300 5550 3750
-Connection ~ 5550 3750
-Wire Wire Line
-	5550 3750 5750 3750
-Wire Wire Line
-	5450 3300 5450 4250
-Connection ~ 5450 4250
-Wire Wire Line
-	5450 4250 4850 4250
-Wire Wire Line
-	5350 3300 5350 4350
-Connection ~ 5350 4350
-Wire Wire Line
-	5350 4350 4850 4350
-Wire Wire Line
-	5200 3300 5200 3850
-Connection ~ 5200 3850
-Wire Wire Line
-	5200 3850 4850 3850
-Wire Wire Line
-	5100 3300 5100 4450
-Connection ~ 5100 4450
-Wire Wire Line
-	5100 4450 4850 4450
 Wire Wire Line
 	5100 2900 5100 2850
 Wire Wire Line
@@ -262,4 +220,46 @@ Wire Wire Line
 Connection ~ 3250 2850
 Wire Wire Line
 	3250 2850 3250 2900
+Wire Wire Line
+	4850 3750 5550 3750
+Wire Wire Line
+	4850 3850 5650 3850
+Wire Wire Line
+	4850 4250 5350 4250
+Wire Wire Line
+	4850 4450 5100 4450
+Wire Wire Line
+	4850 3650 5450 3650
+Wire Wire Line
+	5450 3300 5450 3650
+Connection ~ 5450 3650
+Wire Wire Line
+	5450 3650 5750 3650
+Wire Wire Line
+	5550 3300 5550 3750
+Connection ~ 5550 3750
+Wire Wire Line
+	5550 3750 5750 3750
+Wire Wire Line
+	5650 3300 5650 3850
+Connection ~ 5650 3850
+Wire Wire Line
+	5650 3850 5750 3850
+Wire Wire Line
+	5350 3300 5350 4250
+Connection ~ 5350 4250
+Wire Wire Line
+	5350 4250 5750 4250
+Wire Wire Line
+	4850 4350 5200 4350
+Wire Wire Line
+	5100 3300 5100 4450
+Connection ~ 5100 4450
+Wire Wire Line
+	5100 4450 5750 4450
+Wire Wire Line
+	5200 3300 5200 4350
+Connection ~ 5200 4350
+Wire Wire Line
+	5200 4350 5750 4350
 $EndSCHEMATC
