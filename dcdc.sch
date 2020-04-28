@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:R R21
-U 1 1 5EAAC84D
-P 5000 3800
-F 0 "R21" H 4800 3850 50  0000 L CNN
-F 1 "27" H 4850 3750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4930 3800 50  0001 C CNN
-F 3 "~" H 5000 3800 50  0001 C CNN
-	1    5000 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R18
 U 1 1 5EAACA05
 P 4650 4000
@@ -47,7 +36,7 @@ F 3 "~" H 4650 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 4700 3200 0    50   Input ~ 0
-BAT_VDD
+VDD_BAT
 $Comp
 L Transistor_FET:IRLML6402 Q4
 U 1 1 5EAA7BC1
@@ -58,17 +47,6 @@ F 2 "Package_TO_SOT_SMD:SOT-23" H 5200 3225 50  0001 L CIN
 F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 5000 3300 50  0001 L CNN
 	1    5000 3300
 	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R R20
-U 1 1 5EAAC4DB
-P 4750 3400
-F 0 "R20" H 4550 3450 50  0000 L CNN
-F 1 "4K7" H 4550 3350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4680 3400 50  0001 C CNN
-F 3 "~" H 4750 3400 50  0001 C CNN
-	1    4750 3400
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4700 3200 4750 3200
@@ -357,5 +335,27 @@ F 2 "Diode_SMD:D_SMA_Handsoldering" H 6300 3025 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6300 3200 50  0001 C CNN
 	1    6300 3200
 	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 5EAAC84D
+P 5000 3800
+F 0 "R21" H 4800 3850 50  0000 L CNN
+F 1 "27" H 4850 3750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4930 3800 50  0001 C CNN
+F 3 "~" H 5000 3800 50  0001 C CNN
+	1    5000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5EAAC4DB
+P 4750 3400
+F 0 "R20" H 4550 3450 50  0000 L CNN
+F 1 "4K7" H 4550 3350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4680 3400 50  0001 C CNN
+F 3 "~" H 4750 3400 50  0001 C CNN
+	1    4750 3400
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -40,7 +40,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 3100 5400 3100
 Text HLabel 4950 3000 0    50   Input ~ 0
-USB_VDD
+VDD_USB
 Connection ~ 5350 3000
 $Comp
 L Device:C C5
@@ -65,7 +65,7 @@ Wire Wire Line
 	5000 3000 5350 3000
 Connection ~ 5000 3000
 Text HLabel 6850 3000 2    50   Output ~ 0
-BAT_VDD
+VDD_BAT
 $Comp
 L power:GND #PWR010
 U 1 1 5EA9CBD2
@@ -191,13 +191,13 @@ Wire Wire Line
 Wire Wire Line
 	5350 4850 5400 4850
 Text Label 5050 2950 0    50   ~ 0
-USB_VDD
+VDD_USB
 Wire Wire Line
 	5000 3000 5000 2950
 Wire Wire Line
 	5000 2950 5050 2950
 Text Label 5800 4350 0    50   ~ 0
-USB_VDD
+VDD_USB
 Wire Wire Line
 	5700 4850 5750 4850
 Text HLabel 5050 4500 2    50   Output ~ 0
