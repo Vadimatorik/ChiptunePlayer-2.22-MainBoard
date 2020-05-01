@@ -1,0 +1,560 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 12
+Title ""
+Date "2020-04-18"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "Vadimatorik"
+Comment3 "Vadimatorik"
+Comment4 "Vadimatorik"
+$EndDescr
+$Sheet
+S 3400 1600 700  300 
+U 5EB7312D
+F0 "buttons" 50
+F1 "buttons.sch" 50
+F2 "BUTTON_PLUS" O R 4100 1700 50 
+F3 "BUTTON_MINUS" O R 4100 1800 50 
+$EndSheet
+$Sheet
+S 2400 5800 1700 1200
+U 5E9B058E
+F0 "adc_inputs_div" 50
+F1 "adc_inputs_div.sch" 50
+F2 "B1" I L 2400 6200 50 
+F3 "A1" I L 2400 6100 50 
+F4 "A2" I L 2400 6400 50 
+F5 "C1" I L 2400 6300 50 
+F6 "B2" I L 2400 6500 50 
+F7 "C2" I L 2400 6600 50 
+F8 "LEFT_IN" I L 2400 6700 50 
+F9 "RIGHT_IN" I L 2400 6800 50 
+F10 "BIPPER" I L 2400 6900 50 
+F11 "ADC_CH_BIPPER" O R 4100 6900 50 
+F12 "ADC_CH_RIGHT" O R 4100 6800 50 
+F13 "ADC_CH_LEFT" O R 4100 6700 50 
+F14 "ADC_CH_C2" O R 4100 6600 50 
+F15 "ADC_CH_B2" O R 4100 6500 50 
+F16 "ADC_CH_A2" O R 4100 6400 50 
+F17 "ADC_CH_C1" O R 4100 6300 50 
+F18 "ADC_CH_B1" O R 4100 6200 50 
+F19 "ADC_CH_A1" O R 4100 6100 50 
+F20 "ADC_CH_VDD_USB" O R 4100 6000 50 
+F21 "VDD_USB" I L 2400 6000 50 
+F22 "VDD_BAT" I L 2400 5900 50 
+F23 "ADC_CH_VDD_BAT" O R 4100 5900 50 
+$EndSheet
+$Sheet
+S 3300 4000 800  300 
+U 5EA97D75
+F0 "charging" 50
+F1 "charging.sch" 50
+F2 "CHRG" O R 4100 4100 50 
+F3 "STDBY" O R 4100 4200 50 
+F4 "VDD_USB" I L 3300 4100 50 
+F5 "VDD_BAT" O L 3300 4200 50 
+$EndSheet
+$Sheet
+S 3100 4500 1000 200 
+U 5E9B0FB9
+F0 "dcdc" 50
+F1 "dcdc.sch" 50
+F2 "PWR_5V_ON" I R 4100 4600 50 
+F3 "VDD_BAT" I L 3100 4600 50 
+$EndSheet
+$Sheet
+S 11200 -3250 1050 750 
+U 5E9B10E6
+F0 "mc" 50
+F1 "mc.sch" 50
+F2 "USB_D_+" B L 11200 -3150 50 
+F3 "USB_D_-" B L 11200 -3050 50 
+F4 "USB_VBUS" I L 11200 -2950 50 
+F5 "USB_ID" O L 11200 -2850 50 
+F6 "OTG_EN" O L 11200 -2750 50 
+F7 "VBUS_FAULT" I L 11200 -2650 50 
+$EndSheet
+$Sheet
+S 6000 950  800  300 
+U 5E9B1331
+F0 "ldo" 50
+F1 "ldo.sch" 50
+$EndSheet
+Text Label 4200 1000 0    50   ~ 0
+USB_D_-
+$Sheet
+S 3000 800  1100 600 
+U 5EBBB05A
+F0 "usb" 50
+F1 "usb.sch" 50
+F2 "OTG_EN" I R 4100 1200 50 
+F3 "D_+" B R 4100 900 50 
+F4 "D_-" B R 4100 1000 50 
+F5 "VBUS_FAULT" O R 4100 1300 50 
+F6 "ID" I R 4100 1100 50 
+F7 "VDD_USB" O L 3000 900 50 
+$EndSheet
+Text Label 11150 -2950 2    50   ~ 0
+USB_OTG_VBUS
+Text Label 11150 -3150 2    50   ~ 0
+USB_D_+
+Text Label 11150 -3050 2    50   ~ 0
+USB_D_-
+Text Label 4200 1100 0    50   ~ 0
+USB_ID
+Text Label 11150 -2850 2    50   ~ 0
+USB_ID
+Text Label 11150 -2750 2    50   ~ 0
+OTG_EN
+Text Label 11150 -2650 2    50   ~ 0
+VBUS_FAULT
+Text Label 4200 1200 0    50   ~ 0
+OTG_EN
+Wire Wire Line
+	11150 -3150 11200 -3150
+Wire Wire Line
+	11150 -3050 11200 -3050
+Wire Wire Line
+	11150 -2950 11200 -2950
+Wire Wire Line
+	11150 -2850 11200 -2850
+Wire Wire Line
+	11150 -2750 11200 -2750
+Wire Wire Line
+	11150 -2650 11200 -2650
+$Sheet
+S 3550 2100 550  800 
+U 5ECB9171
+F0 "microsd" 50
+F1 "microsd.sch" 50
+F2 "SD_D2" B R 4100 2400 50 
+F3 "SD_D3" B R 4100 2500 50 
+F4 "SD_D1" B R 4100 2300 50 
+F5 "SD_D0" B R 4100 2200 50 
+F6 "SD_CMD" B R 4100 2600 50 
+F7 "SD_CLK" B R 4100 2700 50 
+F8 "SD_CON" O R 4100 2800 50 
+$EndSheet
+$Sheet
+S 3550 3100 550  700 
+U 5E9E00DA
+F0 "lcd" 50
+F1 "lcd.sch" 50
+F2 "LCD_RES" I R 4100 3200 50 
+F3 "LCD_A0" I R 4100 3300 50 
+F4 "SPI_TX" I R 4100 3400 50 
+F5 "SPI_CLK" I R 4100 3500 50 
+F6 "SPI_CS" I R 4100 3600 50 
+F7 "LCD_LED" I R 4100 3700 50 
+$EndSheet
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EA4C4B4
+P 13900 -2550
+AR Path="/5EBBB05A/5EA4C4B4" Ref="#PWR?"  Part="1" 
+AR Path="/5EA4C4B4" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 13900 -2700 50  0001 C CNN
+F 1 "+3V3" H 13915 -2377 50  0000 C CNN
+F 2 "" H 13900 -2550 50  0001 C CNN
+F 3 "" H 13900 -2550 50  0001 C CNN
+	1    13900 -2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EA4C4BA
+P 13900 -2500
+AR Path="/5EBBB05A/5EA4C4BA" Ref="#PWR?"  Part="1" 
+AR Path="/5EA4C4BA" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 13900 -2750 50  0001 C CNN
+F 1 "GND" H 13905 -2673 50  0000 C CNN
+F 2 "" H 13900 -2500 50  0001 C CNN
+F 3 "" H 13900 -2500 50  0001 C CNN
+	1    13900 -2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5EA506EA
+P 14100 -2550
+AR Path="/5EB7312D/5EA506EA" Ref="#PWR?"  Part="1" 
+AR Path="/5EA506EA" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 14100 -2700 50  0001 C CNN
+F 1 "VDD" H 14115 -2377 50  0000 C CNN
+F 2 "" H 14100 -2550 50  0001 C CNN
+F 3 "" H 14100 -2550 50  0001 C CNN
+	1    14100 -2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5EA506F1
+P 14100 -2450
+AR Path="/5EB7312D/5EA506F1" Ref="#PWR?"  Part="1" 
+AR Path="/5EA506F1" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 14100 -2700 50  0001 C CNN
+F 1 "GNDD" H 14104 -2605 50  0000 C CNN
+F 2 "" H 14100 -2450 50  0001 C CNN
+F 3 "" H 14100 -2450 50  0001 C CNN
+	1    14100 -2450
+	1    0    0    -1  
+$EndComp
+Text Label 4200 1700 0    50   ~ 0
+B_PLUS
+Text Label 4200 1800 0    50   ~ 0
+B_MINUS
+Text Label 4200 4100 0    50   ~ 0
+CHRG
+Text Label 4200 4200 0    50   ~ 0
+STDBY
+Text Label 4200 5900 0    50   ~ 0
+ADC_CH_VDD_BAT
+Text Label 4200 6000 0    50   ~ 0
+ADC_CH_VDD_USB
+Text Label 4200 6700 0    50   ~ 0
+ADC_CH_LEFT_IN
+Text Label 4200 6800 0    50   ~ 0
+ADC_CH_RIGHT
+Text Label 4200 3200 0    50   ~ 0
+LCD_RES
+Text Label 4200 3300 0    50   ~ 0
+LCD_A0
+Text Label 4200 3400 0    50   ~ 0
+SPI1_TX
+Text Label 4200 3500 0    50   ~ 0
+SPI1_CLK
+Text Label 4200 3600 0    50   ~ 0
+SPI1_CS
+Text Label 4200 3700 0    50   ~ 0
+LCD_LED
+$Comp
+L power:+5V #PWR?
+U 1 1 5EA6B614
+P 14250 -2550
+AR Path="/5E9B0FB9/5EA6B614" Ref="#PWR?"  Part="1" 
+AR Path="/5EA6B614" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 14250 -2700 50  0001 C CNN
+F 1 "+5V" H 14265 -2377 50  0000 C CNN
+F 2 "" H 14250 -2550 50  0001 C CNN
+F 3 "" H 14250 -2550 50  0001 C CNN
+	1    14250 -2550
+	1    0    0    -1  
+$EndComp
+Text Label 4200 4600 0    50   ~ 0
+PWR_5V_ON
+$Sheet
+S 15600 -2850 1400 900 
+U 5EABB8BC
+F0 "generators" 50
+F1 "generators.sch" 50
+$EndSheet
+Text Label 4200 1300 0    50   ~ 0
+VBUS_FAULT
+Entry Wire Line
+	4900 900  5000 1000
+Entry Wire Line
+	4900 1100 5000 1200
+Entry Wire Line
+	4900 1200 5000 1300
+Entry Wire Line
+	4900 1300 5000 1400
+Entry Wire Line
+	4900 900  5000 1000
+Entry Wire Line
+	4900 1000 5000 1100
+Wire Wire Line
+	4100 900  4900 900 
+Wire Wire Line
+	4100 1000 4900 1000
+Wire Wire Line
+	4100 1100 4900 1100
+Wire Wire Line
+	4900 1200 4100 1200
+Wire Wire Line
+	4100 1300 4900 1300
+Text Label 4200 900  0    50   ~ 0
+USB_D_+
+Entry Wire Line
+	4900 1700 5000 1800
+Entry Wire Line
+	4900 1800 5000 1900
+Wire Wire Line
+	4100 1700 4900 1700
+Wire Wire Line
+	4900 1800 4100 1800
+Entry Wire Line
+	4900 2200 5000 2300
+Entry Wire Line
+	4900 2300 5000 2400
+Entry Wire Line
+	4900 2400 5000 2500
+Entry Wire Line
+	4900 2500 5000 2600
+Entry Wire Line
+	4900 2600 5000 2700
+Entry Wire Line
+	4900 2700 5000 2800
+Entry Wire Line
+	4900 2800 5000 2900
+Wire Wire Line
+	4100 2200 4900 2200
+Wire Wire Line
+	4900 2300 4100 2300
+Wire Wire Line
+	4100 2400 4900 2400
+Wire Wire Line
+	4900 2500 4100 2500
+Wire Wire Line
+	4100 2600 4900 2600
+Wire Wire Line
+	4900 2700 4100 2700
+Wire Wire Line
+	4100 2800 4900 2800
+Text Label 4200 2200 0    50   ~ 0
+SD_D0
+Text Label 4200 2300 0    50   ~ 0
+SD_D1
+Text Label 4200 2400 0    50   ~ 0
+SD_D2
+Text Label 4200 2500 0    50   ~ 0
+SD_D3
+Text Label 4200 2600 0    50   ~ 0
+SD_CMD
+Text Label 4200 2700 0    50   ~ 0
+SD_CLK
+Text Label 4200 2800 0    50   ~ 0
+SD_CON
+Entry Wire Line
+	4900 3200 5000 3300
+Entry Wire Line
+	4900 3300 5000 3400
+Entry Wire Line
+	4900 3400 5000 3500
+Entry Wire Line
+	4900 3500 5000 3600
+Entry Wire Line
+	4900 3600 5000 3700
+Entry Wire Line
+	4900 3700 5000 3800
+Wire Wire Line
+	4100 3200 4900 3200
+Wire Wire Line
+	4900 3300 4100 3300
+Wire Wire Line
+	4100 3400 4900 3400
+Wire Wire Line
+	4900 3500 4100 3500
+Wire Wire Line
+	4100 3600 4900 3600
+Wire Wire Line
+	4900 3700 4100 3700
+Wire Wire Line
+	4100 4100 4900 4100
+Wire Wire Line
+	4100 4200 4900 4200
+Entry Wire Line
+	4900 4100 5000 4200
+Entry Wire Line
+	4900 4200 5000 4300
+Wire Wire Line
+	3000 900  2900 900 
+Wire Wire Line
+	2900 900  2900 4100
+Wire Wire Line
+	2900 4100 3300 4100
+Entry Wire Line
+	4900 4600 5000 4700
+Wire Wire Line
+	4900 4600 4100 4600
+Wire Wire Line
+	3300 4200 3000 4200
+Wire Wire Line
+	3000 4200 3000 4600
+Wire Wire Line
+	3000 4600 3100 4600
+$Sheet
+S 3500 4900 600  700 
+U 5E9B1427
+F0 "keyboard" 50
+F1 "keyboard.sch" 50
+F2 "BR1" I R 4100 5300 50 
+F3 "BR2" I R 4100 5400 50 
+F4 "BR3" I R 4100 5500 50 
+F5 "SC1" O R 4100 5000 50 
+F6 "SC2" O R 4100 5100 50 
+F7 "SC3" O R 4100 5200 50 
+$EndSheet
+Text Label 4200 5000 0    50   ~ 0
+SC1
+Text Label 4200 5100 0    50   ~ 0
+SC2
+Text Label 4200 5200 0    50   ~ 0
+SC3
+Text Label 4200 5300 0    50   ~ 0
+BR1
+Text Label 4200 5400 0    50   ~ 0
+BR2
+Text Label 4200 5500 0    50   ~ 0
+BR3
+Entry Wire Line
+	4900 5000 5000 5100
+Entry Wire Line
+	4900 5100 5000 5200
+Entry Wire Line
+	4900 5200 5000 5300
+Entry Wire Line
+	4900 5300 5000 5400
+Entry Wire Line
+	4900 5400 5000 5500
+Entry Wire Line
+	4900 5500 5000 5600
+Wire Wire Line
+	4100 5000 4900 5000
+Wire Wire Line
+	4100 5100 4900 5100
+Wire Wire Line
+	4100 5200 4900 5200
+Wire Wire Line
+	4900 5300 4100 5300
+Wire Wire Line
+	4100 5400 4900 5400
+Wire Wire Line
+	4900 5500 4100 5500
+Entry Wire Line
+	4900 5900 5000 6000
+Entry Wire Line
+	4900 6000 5000 6100
+Entry Wire Line
+	4900 6100 5000 6200
+Entry Wire Line
+	4900 6200 5000 6300
+Entry Wire Line
+	4900 6300 5000 6400
+Entry Wire Line
+	4900 6400 5000 6500
+Entry Wire Line
+	4900 6500 5000 6600
+Entry Wire Line
+	4900 6600 5000 6700
+Entry Wire Line
+	4900 6600 5000 6700
+Entry Wire Line
+	4900 6800 5000 6900
+Entry Wire Line
+	4900 6700 5000 6800
+Entry Wire Line
+	4900 6900 5000 7000
+Wire Wire Line
+	4100 5900 4900 5900
+Wire Wire Line
+	4900 6000 4100 6000
+Wire Wire Line
+	4100 6100 4900 6100
+Wire Wire Line
+	4900 6200 4100 6200
+Wire Wire Line
+	4100 6300 4900 6300
+Wire Wire Line
+	4900 6400 4100 6400
+Wire Wire Line
+	4100 6500 4900 6500
+Wire Wire Line
+	4900 6600 4100 6600
+Wire Wire Line
+	4100 6700 4900 6700
+Wire Wire Line
+	4900 6800 4100 6800
+Wire Wire Line
+	4100 6900 4900 6900
+Entry Wire Line
+	1500 6200 1600 6100
+Entry Wire Line
+	1500 6300 1600 6200
+Entry Wire Line
+	1500 6400 1600 6300
+Entry Wire Line
+	1500 6500 1600 6400
+Entry Wire Line
+	1500 6600 1600 6500
+Entry Wire Line
+	1500 6700 1600 6600
+Entry Wire Line
+	1500 6800 1600 6700
+Entry Wire Line
+	1500 6900 1600 6800
+Entry Wire Line
+	1500 7000 1600 6900
+Wire Wire Line
+	1600 6900 2400 6900
+Wire Wire Line
+	1600 6800 2400 6800
+Wire Wire Line
+	2400 6700 1600 6700
+Wire Wire Line
+	1600 6600 2400 6600
+Wire Wire Line
+	2400 6500 1600 6500
+Wire Wire Line
+	1600 6400 2400 6400
+Wire Wire Line
+	2400 6300 1600 6300
+Wire Wire Line
+	1600 6200 2400 6200
+Wire Wire Line
+	2400 6100 1600 6100
+Wire Wire Line
+	2300 4600 3000 4600
+Connection ~ 3000 4600
+Wire Wire Line
+	2400 5900 2300 5900
+Wire Wire Line
+	2300 5900 2300 4600
+Wire Wire Line
+	2400 6000 2200 6000
+Wire Wire Line
+	2200 6000 2200 4100
+Wire Wire Line
+	2200 4100 2900 4100
+Connection ~ 2900 4100
+Text Label 4200 6100 0    50   ~ 0
+ADC_CH_A1
+Text Label 4200 6400 0    50   ~ 0
+ADC_CH_A2
+Text Label 4200 6200 0    50   ~ 0
+ADC_CH_B1
+Text Label 4200 6500 0    50   ~ 0
+ADC_CH_B2
+Text Label 4200 6300 0    50   ~ 0
+ADC_CH_C1
+Text Label 4200 6600 0    50   ~ 0
+ADC_CH_C2
+Text Label 4200 6900 0    50   ~ 0
+ADC_CH_BIPPER
+Text Label 1700 6100 0    50   ~ 0
+A1
+Text Label 1700 6200 0    50   ~ 0
+B1
+Text Label 1700 6300 0    50   ~ 0
+C1
+Text Label 1700 6400 0    50   ~ 0
+A2
+Text Label 1700 6500 0    50   ~ 0
+B2
+Text Label 1700 6600 0    50   ~ 0
+C2
+Text Label 1700 6700 0    50   ~ 0
+LEFT_IN
+Text Label 1700 6800 0    50   ~ 0
+RIGHT_IN
+Text Label 1700 6900 0    50   ~ 0
+BIPPER_IN
+Wire Bus Line
+	1500 6200 1500 7200
+Wire Bus Line
+	5000 1000 5000 7200
+$EndSCHEMATC

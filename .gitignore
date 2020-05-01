@@ -1,5 +1,26 @@
-Altium/History
-Altium/__Previews
-Altium/Project Logs for ChiptunePlayer-2.22-MainBoard v2.0
-Altium/Project Outputs for ChiptunePlayer-2.22-MainBoard v2.0
-Cube
+# For PCBs designed using KiCad: http://www.kicad-pcb.org/
+# Format documentation: http://kicad-pcb.org/help/file-formats/
+
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+*.csv

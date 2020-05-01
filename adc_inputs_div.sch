@@ -1,0 +1,539 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 12
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4900 5800 5200 5800
+Text HLabel 6600 5300 2    50   Output ~ 0
+ADC_CH_BIPPER
+Wire Wire Line
+	5200 5300 6600 5300
+Connection ~ 5200 5300
+Text HLabel 6600 5200 2    50   Output ~ 0
+ADC_CH_C2
+Text HLabel 6600 5100 2    50   Output ~ 0
+ADC_CH_B2
+Wire Wire Line
+	4200 5200 4250 5200
+Text HLabel 4200 5300 0    50   Input ~ 0
+BIPPER
+Wire Wire Line
+	4200 5100 4250 5100
+$Comp
+L power:GND #PWR0108
+U 1 1 5EB854A2
+P 4700 5850
+F 0 "#PWR0108" H 4700 5600 50  0001 C CNN
+F 1 "GND" H 4705 5677 50  0000 C CNN
+F 2 "" H 4700 5850 50  0001 C CNN
+F 3 "" H 4700 5850 50  0001 C CNN
+	1    4700 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5650 5800
+Wire Wire Line
+	6100 5800 6100 5700
+Wire Wire Line
+	5650 5800 6100 5800
+Connection ~ 5200 5800
+Wire Wire Line
+	5650 5800 5650 5700
+Wire Wire Line
+	5200 5800 5650 5800
+Wire Wire Line
+	5200 5800 5200 5700
+Wire Wire Line
+	5200 5300 5200 5400
+Wire Wire Line
+	6100 5100 6600 5100
+Connection ~ 6100 5100
+Wire Wire Line
+	4900 5100 6100 5100
+Wire Wire Line
+	6100 5400 6100 5100
+Wire Wire Line
+	5650 5200 6600 5200
+Connection ~ 5650 5200
+Wire Wire Line
+	5650 5400 5650 5200
+Connection ~ 4700 5300
+Wire Wire Line
+	4700 5300 5200 5300
+Connection ~ 4800 5200
+Wire Wire Line
+	4800 5200 5650 5200
+Connection ~ 4900 5100
+$Comp
+L Device:R_Pack04 RN7
+U 1 1 5EB8547A
+P 4450 5200
+F 0 "RN7" V 4033 5200 50  0000 C CNN
+F 1 "CAT16-103J4" V 4124 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_Cat16-4" V 4725 5200 50  0001 C CNN
+F 3 "~" H 4450 5200 50  0001 C CNN
+	1    4450 5200
+	0    1    1    0   
+$EndComp
+Connection ~ 4900 5800
+Connection ~ 4800 5800
+Wire Wire Line
+	4900 5800 4800 5800
+Wire Wire Line
+	4900 5750 4900 5800
+Wire Wire Line
+	4700 5800 4700 5850
+Connection ~ 4700 5800
+Wire Wire Line
+	4800 5800 4700 5800
+Wire Wire Line
+	4800 5750 4800 5800
+Wire Wire Line
+	4700 5750 4700 5800
+Wire Wire Line
+	4900 5100 4900 5350
+Wire Wire Line
+	4650 5100 4900 5100
+Wire Wire Line
+	4800 5200 4800 5350
+Wire Wire Line
+	4650 5200 4800 5200
+Wire Wire Line
+	4700 5300 4700 5350
+Wire Wire Line
+	4650 5300 4700 5300
+$Comp
+L Device:R_Pack04 RN9
+U 1 1 5EB8545F
+P 4800 5550
+F 0 "RN9" H 5150 5500 50  0000 R CNN
+F 1 "CAT16-103J4" H 5525 5600 50  0000 R CNN
+F 2 "Resistor_SMD:R_Cat16-4" V 5075 5550 50  0001 C CNN
+F 3 "~" H 4800 5550 50  0001 C CNN
+	1    4800 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C39
+U 1 1 5EB85453
+P 6100 5550
+F 0 "C39" H 6215 5596 50  0000 L CNN
+F 1 "100nF" H 6215 5505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6138 5400 50  0001 C CNN
+F 3 "~" H 6100 5550 50  0001 C CNN
+	1    6100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C37
+U 1 1 5EB8544D
+P 5650 5550
+F 0 "C37" H 5765 5596 50  0000 L CNN
+F 1 "100nF" H 5765 5505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5688 5400 50  0001 C CNN
+F 3 "~" H 5650 5550 50  0001 C CNN
+	1    5650 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C35
+U 1 1 5EB85447
+P 5200 5550
+F 0 "C35" H 5315 5596 50  0000 L CNN
+F 1 "100nF" H 5315 5505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5238 5400 50  0001 C CNN
+F 3 "~" H 5200 5550 50  0001 C CNN
+	1    5200 5550
+	1    0    0    -1  
+$EndComp
+Text HLabel 6600 3300 2    50   Output ~ 0
+ADC_CH_A2
+Text HLabel 6600 3200 2    50   Output ~ 0
+ADC_CH_C1
+Text HLabel 6600 3100 2    50   Output ~ 0
+ADC_CH_B1
+Text HLabel 6600 3000 2    50   Output ~ 0
+ADC_CH_A1
+$Comp
+L power:GND #PWR0109
+U 1 1 5EB74FC6
+P 4700 3850
+F 0 "#PWR0109" H 4700 3600 50  0001 C CNN
+F 1 "GND" H 4705 3677 50  0000 C CNN
+F 2 "" H 4700 3850 50  0001 C CNN
+F 3 "" H 4700 3850 50  0001 C CNN
+	1    4700 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3300 4200 3300
+Wire Wire Line
+	4250 3200 4200 3200
+Wire Wire Line
+	4250 3100 4200 3100
+Wire Wire Line
+	4250 3000 4200 3000
+Connection ~ 6100 3800
+Wire Wire Line
+	6550 3800 6550 3700
+Wire Wire Line
+	6100 3800 6550 3800
+Connection ~ 5650 3800
+Wire Wire Line
+	6100 3800 6100 3700
+Wire Wire Line
+	5650 3800 6100 3800
+Connection ~ 5200 3800
+Wire Wire Line
+	5650 3800 5650 3700
+Wire Wire Line
+	5200 3800 5650 3800
+Connection ~ 5000 3800
+Wire Wire Line
+	5200 3800 5200 3700
+Wire Wire Line
+	5000 3800 5200 3800
+Wire Wire Line
+	5200 3300 5200 3400
+Wire Wire Line
+	6550 3000 6600 3000
+Connection ~ 6550 3000
+Wire Wire Line
+	6550 3400 6550 3000
+Wire Wire Line
+	6100 3100 6600 3100
+Connection ~ 6100 3100
+Wire Wire Line
+	4900 3100 6100 3100
+Wire Wire Line
+	6100 3400 6100 3100
+Wire Wire Line
+	5650 3200 6600 3200
+Connection ~ 5650 3200
+Wire Wire Line
+	5650 3400 5650 3200
+Wire Wire Line
+	5200 3300 6600 3300
+Connection ~ 5200 3300
+Connection ~ 4700 3300
+Wire Wire Line
+	4700 3300 5200 3300
+Connection ~ 4800 3200
+Wire Wire Line
+	4800 3200 5650 3200
+Connection ~ 4900 3100
+$Comp
+L Device:R_Pack04 RN6
+U 1 1 5EB74F9A
+P 4450 3200
+F 0 "RN6" V 4033 3200 50  0000 C CNN
+F 1 "CAT16-103J4" V 4124 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_Cat16-4" V 4725 3200 50  0001 C CNN
+F 3 "~" H 4450 3200 50  0001 C CNN
+	1    4450 3200
+	0    1    1    0   
+$EndComp
+Connection ~ 5000 3000
+Wire Wire Line
+	5000 3000 6550 3000
+Connection ~ 4900 3800
+Wire Wire Line
+	5000 3800 4900 3800
+Wire Wire Line
+	5000 3750 5000 3800
+Connection ~ 4800 3800
+Wire Wire Line
+	4900 3800 4800 3800
+Wire Wire Line
+	4900 3750 4900 3800
+Wire Wire Line
+	4700 3800 4700 3850
+Connection ~ 4700 3800
+Wire Wire Line
+	4800 3800 4700 3800
+Wire Wire Line
+	4800 3750 4800 3800
+Wire Wire Line
+	4700 3750 4700 3800
+Wire Wire Line
+	5000 3000 5000 3350
+Wire Wire Line
+	4650 3000 5000 3000
+Wire Wire Line
+	4900 3100 4900 3350
+Wire Wire Line
+	4650 3100 4900 3100
+Wire Wire Line
+	4800 3200 4800 3350
+Wire Wire Line
+	4650 3200 4800 3200
+Wire Wire Line
+	4700 3300 4700 3350
+Wire Wire Line
+	4650 3300 4700 3300
+$Comp
+L Device:R_Pack04 RN8
+U 1 1 5EB74F7D
+P 4800 3550
+F 0 "RN8" H 5150 3500 50  0000 R CNN
+F 1 "CAT16-103J4" H 5525 3600 50  0000 R CNN
+F 2 "Resistor_SMD:R_Cat16-4" V 5075 3550 50  0001 C CNN
+F 3 "~" H 4800 3550 50  0001 C CNN
+	1    4800 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C40
+U 1 1 5EB74F77
+P 6550 3550
+F 0 "C40" H 6665 3596 50  0000 L CNN
+F 1 "100nF" H 6665 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6588 3400 50  0001 C CNN
+F 3 "~" H 6550 3550 50  0001 C CNN
+	1    6550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C38
+U 1 1 5EB74F71
+P 6100 3550
+F 0 "C38" H 6215 3596 50  0000 L CNN
+F 1 "100nF" H 6215 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6138 3400 50  0001 C CNN
+F 3 "~" H 6100 3550 50  0001 C CNN
+	1    6100 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C36
+U 1 1 5EB74F6B
+P 5650 3550
+F 0 "C36" H 5765 3596 50  0000 L CNN
+F 1 "100nF" H 5765 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5688 3400 50  0001 C CNN
+F 3 "~" H 5650 3550 50  0001 C CNN
+	1    5650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C34
+U 1 1 5EB74F65
+P 5200 3550
+F 0 "C34" H 5315 3596 50  0000 L CNN
+F 1 "100nF" H 5315 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5238 3400 50  0001 C CNN
+F 3 "~" H 5200 3550 50  0001 C CNN
+	1    5200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5E9C6C4C
+P 4700 1850
+F 0 "#PWR08" H 4700 1600 50  0001 C CNN
+F 1 "GND" H 4705 1677 50  0000 C CNN
+F 2 "" H 4700 1850 50  0001 C CNN
+F 3 "" H 4700 1850 50  0001 C CNN
+	1    4700 1850
+	1    0    0    -1  
+$EndComp
+Text HLabel 6600 1300 2    50   Output ~ 0
+ADC_CH_RIGHT
+Text HLabel 6600 1200 2    50   Output ~ 0
+ADC_CH_LEFT
+Wire Wire Line
+	4250 1300 4200 1300
+Wire Wire Line
+	4250 1200 4200 1200
+Wire Wire Line
+	4250 1100 4200 1100
+Wire Wire Line
+	4250 1000 4200 1000
+Text HLabel 6600 1100 2    50   Output ~ 0
+ADC_CH_VDD_USB
+Text HLabel 4200 1100 0    50   Input ~ 0
+VDD_USB
+Connection ~ 6100 1800
+Wire Wire Line
+	6550 1800 6550 1700
+Wire Wire Line
+	6100 1800 6550 1800
+Connection ~ 5650 1800
+Wire Wire Line
+	6100 1800 6100 1700
+Wire Wire Line
+	5650 1800 6100 1800
+Connection ~ 5200 1800
+Wire Wire Line
+	5650 1800 5650 1700
+Wire Wire Line
+	5200 1800 5650 1800
+Connection ~ 5000 1800
+Wire Wire Line
+	5200 1800 5200 1700
+Wire Wire Line
+	5000 1800 5200 1800
+Wire Wire Line
+	5200 1300 5200 1400
+Wire Wire Line
+	6550 1000 6600 1000
+Connection ~ 6550 1000
+Wire Wire Line
+	6550 1400 6550 1000
+Wire Wire Line
+	6100 1100 6600 1100
+Connection ~ 6100 1100
+Wire Wire Line
+	4900 1100 6100 1100
+Wire Wire Line
+	6100 1400 6100 1100
+Wire Wire Line
+	5650 1200 6600 1200
+Connection ~ 5650 1200
+Wire Wire Line
+	5650 1400 5650 1200
+Wire Wire Line
+	5200 1300 6600 1300
+Connection ~ 5200 1300
+Connection ~ 4700 1300
+Wire Wire Line
+	4700 1300 5200 1300
+Connection ~ 4800 1200
+Wire Wire Line
+	4800 1200 5650 1200
+Connection ~ 4900 1100
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5E9B88DE
+P 4450 1200
+F 0 "RN1" V 4033 1200 50  0000 C CNN
+F 1 "CAT16-103J4" V 4124 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_Cat16-4" V 4725 1200 50  0001 C CNN
+F 3 "~" H 4450 1200 50  0001 C CNN
+	1    4450 1200
+	0    1    1    0   
+$EndComp
+Text HLabel 4200 1000 0    50   Input ~ 0
+VDD_BAT
+Connection ~ 5000 1000
+Wire Wire Line
+	5000 1000 6550 1000
+Text HLabel 6600 1000 2    50   Output ~ 0
+ADC_CH_VDD_BAT
+Connection ~ 4900 1800
+Wire Wire Line
+	5000 1800 4900 1800
+Wire Wire Line
+	5000 1750 5000 1800
+Connection ~ 4800 1800
+Wire Wire Line
+	4900 1800 4800 1800
+Wire Wire Line
+	4900 1750 4900 1800
+Wire Wire Line
+	4700 1800 4700 1850
+Connection ~ 4700 1800
+Wire Wire Line
+	4800 1800 4700 1800
+Wire Wire Line
+	4800 1750 4800 1800
+Wire Wire Line
+	4700 1750 4700 1800
+Wire Wire Line
+	5000 1000 5000 1350
+Wire Wire Line
+	4650 1000 5000 1000
+Wire Wire Line
+	4900 1100 4900 1350
+Wire Wire Line
+	4650 1100 4900 1100
+Wire Wire Line
+	4800 1200 4800 1350
+Wire Wire Line
+	4650 1200 4800 1200
+Wire Wire Line
+	4700 1300 4700 1350
+Wire Wire Line
+	4650 1300 4700 1300
+$Comp
+L Device:R_Pack04 RN2
+U 1 1 5E9C10FD
+P 4800 1550
+F 0 "RN2" H 5150 1500 50  0000 R CNN
+F 1 "CAT16-103J4" H 5525 1600 50  0000 R CNN
+F 2 "Resistor_SMD:R_Cat16-4" V 5075 1550 50  0001 C CNN
+F 3 "~" H 4800 1550 50  0001 C CNN
+	1    4800 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5E9B7343
+P 6550 1550
+F 0 "C4" H 6665 1596 50  0000 L CNN
+F 1 "100nF" H 6665 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6588 1400 50  0001 C CNN
+F 3 "~" H 6550 1550 50  0001 C CNN
+	1    6550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5E9B731A
+P 6100 1550
+F 0 "C3" H 6215 1596 50  0000 L CNN
+F 1 "100nF" H 6215 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6138 1400 50  0001 C CNN
+F 3 "~" H 6100 1550 50  0001 C CNN
+	1    6100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5E9B72ED
+P 5650 1550
+F 0 "C2" H 5765 1596 50  0000 L CNN
+F 1 "100nF" H 5765 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5688 1400 50  0001 C CNN
+F 3 "~" H 5650 1550 50  0001 C CNN
+	1    5650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5E9B72C3
+P 5200 1550
+F 0 "C1" H 5315 1596 50  0000 L CNN
+F 1 "100nF" H 5315 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5238 1400 50  0001 C CNN
+F 3 "~" H 5200 1550 50  0001 C CNN
+	1    5200 1550
+	1    0    0    -1  
+$EndComp
+Text HLabel 4200 1300 0    50   Input ~ 0
+RIGHT_IN
+Text HLabel 4200 1200 0    50   Input ~ 0
+LEFT_IN
+Text HLabel 4200 5200 0    50   Input ~ 0
+C2
+Text HLabel 4200 5100 0    50   Input ~ 0
+B2
+Text HLabel 4200 3200 0    50   Input ~ 0
+C1
+Text HLabel 4200 3300 0    50   Input ~ 0
+A2
+Text HLabel 4200 3000 0    50   Input ~ 0
+A1
+Text HLabel 4200 3100 0    50   Input ~ 0
+B1
+$EndSCHEMATC
