@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ChiptunePlayer-2.22-MainBoard-rescue)(type Legacy)(uri ${KIPRJMOD}/ChiptunePlayer-2.22-MainBoard-rescue.lib)(options "")(descr ""))
+)
