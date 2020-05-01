@@ -1,0 +1,179 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 13 13
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R?
+U 1 1 5EB04FEE
+P 5600 3650
+AR Path="/5E9B0FB9/5EB04FEE" Ref="R?"  Part="1" 
+AR Path="/5EB024CB/5EB04FEE" Ref="R24"  Part="1" 
+F 0 "R24" H 5650 3700 50  0000 L CNN
+F 1 "1K" H 5650 3600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5530 3650 50  0001 C CNN
+F 3 "~" H 5600 3650 50  0001 C CNN
+	1    5600 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EB04FF4
+P 5600 4050
+AR Path="/5E9B0FB9/5EB04FF4" Ref="R?"  Part="1" 
+AR Path="/5EB024CB/5EB04FF4" Ref="R25"  Part="1" 
+F 0 "R25" H 5650 4100 50  0000 L CNN
+F 1 "10K" H 5650 4000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5530 4050 50  0001 C CNN
+F 3 "~" H 5600 4050 50  0001 C CNN
+	1    5600 4050
+	1    0    0    -1  
+$EndComp
+Text HLabel 5650 2800 0    50   Input ~ 0
+VDD_BAT_IN
+$Comp
+L Transistor_FET:IRLML6402 Q?
+U 1 1 5EB04FFB
+P 5950 2900
+AR Path="/5E9B0FB9/5EB04FFB" Ref="Q?"  Part="1" 
+AR Path="/5EB024CB/5EB04FFB" Ref="Q6"  Part="1" 
+F 0 "Q6" V 6292 2900 50  0000 C CNN
+F 1 "IRLML6402" V 6201 2900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6150 2825 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 5950 2900 50  0001 L CNN
+	1    5950 2900
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5650 2800 5700 2800
+Wire Wire Line
+	5700 2850 5700 2800
+Connection ~ 5700 2800
+Wire Wire Line
+	5700 2800 5750 2800
+Wire Wire Line
+	5700 3150 5700 3200
+Wire Wire Line
+	5700 3200 5950 3200
+Wire Wire Line
+	5950 3200 5950 3100
+Wire Wire Line
+	5950 3250 5950 3200
+Connection ~ 5950 3200
+Wire Wire Line
+	5600 3500 5600 3450
+Wire Wire Line
+	5600 3450 5550 3450
+Text HLabel 5550 3450 0    50   Input ~ 0
+PWR_ON
+$Comp
+L Transistor_BJT:BC817 Q?
+U 1 1 5EB0500D
+P 5850 3850
+AR Path="/5E9B0FB9/5EB0500D" Ref="Q?"  Part="1" 
+AR Path="/5EB024CB/5EB0500D" Ref="Q5"  Part="1" 
+F 0 "Q5" H 6041 3896 50  0000 L CNN
+F 1 "BC817" H 6041 3805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6050 3775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 5850 3850 50  0001 L CNN
+	1    5850 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3850 5600 3850
+Wire Wire Line
+	5600 3850 5600 3800
+Wire Wire Line
+	5950 3550 5950 3600
+Wire Wire Line
+	5600 3900 5600 3850
+Connection ~ 5600 3850
+Wire Wire Line
+	5600 4200 5600 4250
+Wire Wire Line
+	5950 4050 5950 4250
+Wire Wire Line
+	5950 4250 5600 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5EB0501B
+P 5950 4300
+AR Path="/5EBBB05A/5EB0501B" Ref="#PWR?"  Part="1" 
+AR Path="/5EB0501B" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B0FB9/5EB0501B" Ref="#PWR?"  Part="1" 
+AR Path="/5EB024CB/5EB0501B" Ref="#PWR050"  Part="1" 
+F 0 "#PWR050" H 5950 4050 50  0001 C CNN
+F 1 "GND" H 5955 4127 50  0000 C CNN
+F 2 "" H 5950 4300 50  0001 C CNN
+F 3 "" H 5950 4300 50  0001 C CNN
+	1    5950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4250 5950 4300
+Connection ~ 5950 4250
+$Comp
+L Device:R R?
+U 1 1 5EB05049
+P 5950 3400
+AR Path="/5E9B0FB9/5EB05049" Ref="R?"  Part="1" 
+AR Path="/5EB024CB/5EB05049" Ref="R27"  Part="1" 
+F 0 "R27" H 5750 3450 50  0000 L CNN
+F 1 "27" H 5800 3350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5880 3400 50  0001 C CNN
+F 3 "~" H 5950 3400 50  0001 C CNN
+	1    5950 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EB0504F
+P 5700 3000
+AR Path="/5E9B0FB9/5EB0504F" Ref="R?"  Part="1" 
+AR Path="/5EB024CB/5EB0504F" Ref="R26"  Part="1" 
+F 0 "R26" H 5500 3050 50  0000 L CNN
+F 1 "4K7" H 5500 2950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5630 3000 50  0001 C CNN
+F 3 "~" H 5700 3000 50  0001 C CNN
+	1    5700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5EB06437
+P 6200 3600
+AR Path="/5EB7312D/5EB06437" Ref="SW?"  Part="1" 
+AR Path="/5EB024CB/5EB06437" Ref="SW10"  Part="1" 
+F 0 "SW10" H 6200 3885 50  0000 C CNN
+F 1 "PWR_ON" H 6200 3794 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx83-2LFS" H 6200 3800 50  0001 C CNN
+F 3 "~" H 6200 3800 50  0001 C CNN
+	1    6200 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2800 6200 2800
+Text HLabel 6200 2800 2    50   Output ~ 0
+VDD_BAT_OUT
+Wire Wire Line
+	5950 3600 6000 3600
+Wire Wire Line
+	5950 3650 5950 3600
+Connection ~ 5950 3600
+Wire Wire Line
+	6400 3600 6450 3600
+Wire Wire Line
+	6450 3600 6450 4250
+Wire Wire Line
+	6450 4250 5950 4250
+$EndSCHEMATC

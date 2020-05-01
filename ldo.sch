@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 12
+Sheet 7 13
 Title ""
 Date ""
 Rev ""
@@ -13,4 +13,148 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L ldo:NCP551SN33T1G U6
+U 1 1 5EAD5242
+P 5550 3400
+F 0 "U6" H 5550 3725 50  0000 C CNN
+F 1 "NCP551SN33T1G" H 5550 3634 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-5_HandSoldering" H 5600 4000 50  0001 C CNN
+F 3 "" H 5600 2800 50  0001 C CNN
+	1    5550 3400
+	1    0    0    -1  
+$EndComp
+Text HLabel 4800 3300 0    50   Input ~ 0
+VDD_BAT
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EADA95B
+P 6550 3250
+AR Path="/5EBBB05A/5EADA95B" Ref="#PWR?"  Part="1" 
+AR Path="/5EADA95B" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B1331/5EADA95B" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 6550 3100 50  0001 C CNN
+F 1 "+3V3" H 6565 3423 50  0000 C CNN
+F 2 "" H 6550 3250 50  0001 C CNN
+F 3 "" H 6550 3250 50  0001 C CNN
+	1    6550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EADA961
+P 5550 3850
+AR Path="/5EBBB05A/5EADA961" Ref="#PWR?"  Part="1" 
+AR Path="/5EADA961" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B1331/5EADA961" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 5550 3600 50  0001 C CNN
+F 1 "GND" H 5555 3677 50  0000 C CNN
+F 2 "" H 5550 3850 50  0001 C CNN
+F 3 "" H 5550 3850 50  0001 C CNN
+	1    5550 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 6550 3300
+Wire Wire Line
+	6550 3300 6550 3250
+Wire Wire Line
+	6550 3300 6550 3350
+$Comp
+L Device:C C?
+U 1 1 5EADCA5D
+P 6100 3500
+AR Path="/5E9B0FB9/5EADCA5D" Ref="C?"  Part="1" 
+AR Path="/5E9B1331/5EADCA5D" Ref="C42"  Part="1" 
+F 0 "C42" H 6215 3546 50  0000 L CNN
+F 1 "10uF" H 6215 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6138 3350 50  0001 C CNN
+F 3 "~" H 6100 3500 50  0001 C CNN
+	1    6100 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EADCA63
+P 6550 3500
+AR Path="/5E9B0FB9/5EADCA63" Ref="C?"  Part="1" 
+AR Path="/5E9B1331/5EADCA63" Ref="C43"  Part="1" 
+F 0 "C43" H 6665 3546 50  0000 L CNN
+F 1 "100nF" H 6665 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6588 3350 50  0001 C CNN
+F 3 "~" H 6550 3500 50  0001 C CNN
+	1    6550 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EADCA69
+P 6550 3850
+AR Path="/5EBBB05A/5EADCA69" Ref="#PWR?"  Part="1" 
+AR Path="/5EADCA69" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B0FB9/5EADCA69" Ref="#PWR?"  Part="1" 
+AR Path="/5E9B1331/5EADCA69" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 6550 3600 50  0001 C CNN
+F 1 "GND" H 6555 3677 50  0000 C CNN
+F 2 "" H 6550 3850 50  0001 C CNN
+F 3 "" H 6550 3850 50  0001 C CNN
+	1    6550 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3300 6100 3300
+Wire Wire Line
+	6100 3350 6100 3300
+Connection ~ 6100 3300
+Wire Wire Line
+	6100 3300 6550 3300
+Wire Wire Line
+	5550 3700 5550 3800
+$Comp
+L Device:C C?
+U 1 1 5EADF69E
+P 4850 3600
+AR Path="/5E9B0FB9/5EADF69E" Ref="C?"  Part="1" 
+AR Path="/5E9B1331/5EADF69E" Ref="C41"  Part="1" 
+F 0 "C41" H 4600 3650 50  0000 L CNN
+F 1 "10uF" H 4550 3550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4888 3450 50  0001 C CNN
+F 3 "~" H 4850 3600 50  0001 C CNN
+	1    4850 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3750 4850 3800
+Wire Wire Line
+	4850 3800 5000 3800
+Connection ~ 5550 3800
+Wire Wire Line
+	5550 3800 5550 3850
+Wire Wire Line
+	4850 3450 4850 3400
+Wire Wire Line
+	4850 3400 5050 3400
+Wire Wire Line
+	5000 3500 5000 3800
+Connection ~ 5000 3800
+Wire Wire Line
+	5000 3800 5550 3800
+Wire Wire Line
+	5000 3500 5050 3500
+Wire Wire Line
+	4850 3300 4850 3400
+Wire Wire Line
+	4850 3300 5050 3300
+Connection ~ 4850 3400
+Wire Wire Line
+	4800 3300 4850 3300
+Connection ~ 4850 3300
+Wire Wire Line
+	6100 3650 6100 3700
+Wire Wire Line
+	6100 3700 6550 3700
+Wire Wire Line
+	6550 3700 6550 3650
+Wire Wire Line
+	6550 3700 6550 3850
+Connection ~ 6550 3700
 $EndSCHEMATC
